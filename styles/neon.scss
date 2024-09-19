@@ -1,0 +1,26 @@
+.pink {
+	color: azure;
+	--color1: #ffc9f3;
+	--color2: #ff93e7;
+	--color3: #ca1f7b;
+	--color4: magenta;
+	--color5: #b81d70;
+}
+
+.turquoise {
+	color: #e2fefe;
+	--color1: #b1fdfe;
+	--color2: #80fdff;
+	--color3: #4ffcff;
+	--color4: #1efbff;
+	--color5: #00e9ec;
+}
+
+.neon {
+	text-shadow:
+		0 0 10px var(--color1),
+		0 0 20px var(--color2),
+		0 0 40px var(--color3),
+		0 0 80px var(--color4),
+		0 0 100px var(--color4);
+}

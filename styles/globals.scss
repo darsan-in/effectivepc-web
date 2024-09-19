@@ -2,23 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-*{ box-sizing: border-box; text-rendering: optimizeLegibility; scroll-behavior: smooth;}
-
-html::-webkit-scrollbar { display: none; }
-html { -ms-overflow-style: none; scrollbar-width: none; }
-
-body{background: #05060f linear-gradient(0deg,rgba(216,236,248,.06),rgba(152,192,239,.06));}
-@property --p {
-    syntax: '<percentage>';
-    inherits: false;
-    initial-value: 0%;
+* {
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
 }
 
-p,a{
+html::-webkit-scrollbar {
+	display: none;
+}
+html {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+main,
+body,
+html {
+	background: #05060f linear-gradient(0deg, rgba(216, 236, 248, 0.06), rgba(152, 192, 239, 0.06)) !important;
+}
+@property --p {
+	syntax: "<percentage>";
+	inherits: false;
+	initial-value: 0%;
+}
+
+.ttext {
 	color: #d8ecf8;
-    text-shadow: 0 2px 16px rgba(174,207,242,.24);
-    background: linear-gradient(0deg, #d8ecf8 0, #98c0ef 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	text-shadow: 0 2px 16px rgba(174, 207, 242, 0.24);
+	background: linear-gradient(0deg, #d8ecf8 0, #98c0ef 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

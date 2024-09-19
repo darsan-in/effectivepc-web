@@ -34,12 +34,12 @@ export default function Footer() {
 	];
 
 	return (
-		<footer className="text-white px-4 py-5 max-w-screen-xl mx-auto md:px-8 z-[2] relative leading-loose tracking-widest space-y-20">
+		<footer className="px-4 pb-5 pt-[5%] mx-auto md:px-8 z-[2] relative leading-loose tracking-widest space-y-20 bg-black text-tw border-t border-tw/[30%]">
 			<div className="max-w-lg sm:mx-auto sm:text-center">
 				<Logo classNames="text-[#f00] w-[250px] mx-auto" />
-				<p className="leading-relaxed mt-2 text-[15px]">
-					Effective PC delivers custom-built computers tailored for gamers
-					and businesses. Whether you need a powerful gaming rig or bulk
+				<p className="leading-relaxed mt-2 text-[15px] font-light">
+					We delivers custom-built computers tailored for gamers and
+					businesses. Whether you need a powerful gaming rig or bulk
 					systems for your startup, we provide top-tier PCs that maximize
 					performance and cost-efficiency. Unlock more with the perfect
 					PC—designed to fit your needs and budget.

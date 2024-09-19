@@ -1,0 +1,104 @@
+@property --rotate {
+	syntax: "<angle>";
+	initial-value: 132deg;
+	inherits: false;
+}
+
+.card {
+	background: #191c29;
+	position: relative;
+	border-radius: 6px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	color: rgb(88 199 250 / 100%);
+	transition: color 1s;
+	@apply w-[40%] flex-col leading-loose p-[4%] rounded-br-[20%] rounded-tl-[20%];
+}
+
+.card::before {
+	content: "";
+	width: 101%;
+	height: 101%;
+	border-radius: 8px;
+	position: absolute;
+	z-index: -1;
+	top: -0.5%;
+	left: -0.5%;
+}
+.card::after,
+.card::before,
+.card > h2 {
+	animation: spin 2s linear infinite;
+}
+.card::after {
+	position: absolute;
+	content: "";
+	top: calc(var(--card-height) / 6);
+	left: 0;
+	right: 0;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	transform: scale(0.1);
+	filter: blur(calc(var(--card-height) / 6));
+	opacity: 1;
+	transition: opacity 0.5s;
+}
+
+@keyframes spin {
+	0% {
+		--rotate: 0deg;
+	}
+	100% {
+		--rotate: 360deg;
+	}
+}
+.card > h2 {
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	@apply text-2xl font-bold tracking-widest mb-[2%];
+}
+.card > ul {
+	@apply font-light;
+	list-style: disc;
+	text-align: start;
+}
+
+.card > ul strong {
+	@apply font-medium;
+}
+
+#gamer > .card::before,
+#gamer > .card::after,
+#gamer > .card > h2 {
+	background-image: linear-gradient(
+		var(--rotate),
+		var(--orange),
+		var(--yellow),
+		var(--green),
+		var(--blue),
+		var(--purple),
+		var(--pink),
+		var(--red)
+	);
+	border-top-left-radius: 20%;
+}
+
+#pro > .card::before,
+#pro > .card::after,
+#pro > .card > h2 {
+	background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+	border-bottom-right-radius: 20%;
+}
+
+.card:hover {
+	color: white !important;
+}
+
+.comp {
+	@apply w-[40%] flex;
+}

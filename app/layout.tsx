@@ -1,10 +1,11 @@
+import { Theme } from "@radix-ui/themes";
+import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "../styles/globals.scss";
-
-const globFont = Open_Sans({
+const globFont = Manrope({
 	weight: "variable",
-	style: ["normal", "italic"],
+	style: ["normal"],
 	subsets: ["latin"],
 	adjustFontFallback: true,
 	preload: true,
@@ -137,7 +138,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body className={`${globFont.className} antialiased`}>
-				{children}
+				<Theme> {children}</Theme>
 			</body>
 		</html>
 	);

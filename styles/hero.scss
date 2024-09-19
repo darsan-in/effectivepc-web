@@ -480,7 +480,7 @@ p {
 	right: 0;
 	width: 100%;
 	height: 42em;
-	z-index: -2;
+	z-index: 1;
 	--accent-lines-clr: rgba(186, 215, 247, 0.18);
 }
 .accent-lines > div {
@@ -572,7 +572,6 @@ p {
 	right: 0;
 	margin: auto;
 	translate: 0 -1px;
-
 	opacity: 0;
 	scale: 0;
 	animation: accentload 2s ease-out 4.4s forwards;

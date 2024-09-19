@@ -3,6 +3,7 @@ import heroVisualInit from "@/scripts/hero-visuals";
 import "@/styles/hero.scss";
 import { useEffect, useState } from "react";
 import BrandIcon from "./bicon";
+import ContactBtn from "./cantact-btn";
 import Logo from "./logo";
 
 export default function Hero() {
@@ -110,10 +111,7 @@ export default function Hero() {
 									);
 								})}
 								<li>
-									<button className="nav-btn">
-										<span className="glow"></span>
-										<span className="nav-btn-content">Contact Us</span>
-									</button>
+									<ContactBtn />
 								</li>
 							</ul>
 						</div>
