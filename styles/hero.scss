@@ -23,7 +23,8 @@ header {
 	justify-content: center;
 	color: #bad6f7;
 	padding: 2em;
-	position: absolute;
+	padding-top: 1.5em;
+	position: relative;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -83,116 +84,6 @@ header > :nth-child(2):hover ~ .spotlight {
 	}
 	100% {
 		filter: hue-rotate(-380deg);
-	}
-}
-
-.sm-btn,
-.sm-btn::before {
-	width: 3rem !important;
-	height: 3rem !important;
-}
-.nav-btn,
-.sm-btn {
-	position: relative;
-	margin: 0 auto;
-	width: 120px;
-	height: 40px;
-	cursor: pointer;
-	border-radius: 20em;
-	border: none;
-	transition:
-		background 0.5s,
-		transform 0.5s;
-
-	border: 1px solid #c2ccff33;
-	opacity: 1;
-	padding-top: 0.3em;
-
-	background: #121521;
-	color: #9dc3f7;
-	white-space: nowrap;
-	@apply flex justify-center items-center;
-}
-.nav-btn::before,
-.sm-btn::before {
-	content: "";
-	display: block;
-	position: absolute;
-	left: 0;
-	top: 0;
-	border-radius: 20em;
-	width: 120px;
-	height: 40px;
-	background: #c2ccff91 radial-gradient(farthest-side at 50% 100%, #c2ccff, transparent);
-	opacity: 0.1;
-	transition: all 0.4s ease-in-out;
-}
-.nav-btn:hover::before,
-.sm-btn:hover::before {
-	background: #c2ccff1e radial-gradient(farthest-side at 50% 100%, #c2ccff, transparent);
-	opacity: 0.3;
-}
-.nav-btn .glow {
-	width: 120px;
-	height: 40px;
-	--border-width: 1px;
-	--loop-cycle: 24s;
-	position: absolute;
-	inset: calc(var(--border-width) * -1);
-	border-radius: 50px;
-	border: var(--border-width) solid transparent;
-	-webkit-mask: linear-gradient(transparent, transparent), linear-gradient(white, white);
-	mask: linear-gradient(transparent, transparent), linear-gradient(white, white);
-	-webkit-mask-clip: padding-box, border-box;
-	mask-clip: padding-box, border-box;
-	-webkit-mask-composite: source-in, xor;
-	mask-composite: intersect;
-	pointer-events: none;
-}
-.nav-btn:hover .glow {
-	--loop-cycle: 2s;
-}
-.nav-btn .glow::after,
-.nav-btn .glow::before {
-	content: "";
-	height: 100%;
-	offset-anchor: 100% 50%;
-	background: radial-gradient(circle at 50% 50%, hsla(0, 0%, 100%, 0.75), transparent 50%),
-		radial-gradient(circle at 50% 50%, #c2ccff 50%, transparent);
-	opacity: 0.4;
-	offset-path: rect(0 100% 100% 0 round 33px);
-	position: absolute;
-	display: inline-block;
-	-webkit-animation: loop 4s linear infinite;
-	animation: loop var(--loop-cycle) linear infinite;
-	aspect-ratio: 1 / 1;
-	transition: opacity 1s ease-in-out;
-}
-.nav-btn .glow::before {
-	animation-delay: calc(var(--loop-cycle) / -2);
-}
-@keyframes loop {
-	100% {
-		offset-distance: 100%;
-	}
-}
-.nav-btn-content {
-	background: linear-gradient(0deg, #d8ecf8, #98c0ef);
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-size: 1.2em;
-	line-height: 142%;
-}
-.nav-btn:hover .glow::after,
-.nav-btn:hover .glow::before {
-	opacity: 0.6;
-}
-@keyframes btn-rot {
-	0% {
-		rotate: 0deg;
-	}
-	100% {
-		rotate: 360deg;
 	}
 }
 
@@ -301,7 +192,7 @@ p {
 	height: 100%;
 	max-height: 140px;
 	position: absolute;
-	top: 16em;
+	top: 9em;
 }
 
 .heroT {
@@ -381,10 +272,6 @@ p {
 
 .heroP {
 	font-size: 1.2em;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 20.6em;
 	margin: auto;
 	height: fit-content;
 	width: fit-content;
@@ -411,7 +298,7 @@ p {
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 13em;
+	top: 6em;
 	margin: auto;
 	height: fit-content;
 	opacity: 0;
@@ -475,7 +362,7 @@ p {
 .accent-lines {
 	pointer-events: none;
 	position: absolute;
-	top: 0;
+	top: -11%;
 	left: 0;
 	right: 0;
 	width: 100%;
@@ -506,13 +393,14 @@ p {
 	animation: accentload 2s ease-out 2.4s forwards;
 }
 .accent-lines > div:nth-child(1) > div:nth-child(1) {
-	top: 6em;
+	/* top: 6em; */
+	display: none;
 }
 .accent-lines > div:nth-child(1) > div:nth-child(2) {
-	top: 11em;
+	top: 10em;
 }
 .accent-lines > div:nth-child(1) > div:nth-child(3) {
-	top: 16em;
+	top: 12.5em;
 }
 .accent-lines > div:nth-child(1) > div:nth-child(4) {
 	top: 24em;
@@ -547,16 +435,20 @@ p {
 	animation: accentload 2s ease-out 2s forwards;
 }
 .accent-lines > div:nth-child(2) > div:nth-child(1) {
-	left: 24em;
+	/* left: 74em; */
+	display: none;
 }
 .accent-lines > div:nth-child(2) > div:nth-child(2) {
-	left: 34em;
+	/* left: 61em; */
+	display: none;
 }
 .accent-lines > div:nth-child(2) > div:nth-child(3) {
-	right: 24em;
+	/* right: 74em; */
+	display: none;
 }
 .accent-lines > div:nth-child(2) > div:nth-child(4) {
-	right: 34em;
+	/* right: 61em; */
+	display: none;
 }
 
 .accent-lines > div:nth-child(1) > div::before,
@@ -604,11 +496,12 @@ p {
 
 .accent-lines > div:nth-child(1) > div:nth-child(2)::before,
 .accent-lines > div:nth-child(1) > div:nth-child(2)::after {
-	display: block;
-	width: 5em;
+	/* display: block;
+	width: 2em;
 	height: 1px;
 	border-radius: 0;
-	opacity: 0.12;
+	opacity: 0.12; */
+	display: none;
 }
 .accent-lines > div:nth-child(1) > div:nth-child(2)::before {
 	right: 24em;

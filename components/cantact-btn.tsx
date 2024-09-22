@@ -1,17 +1,15 @@
-import { Popover } from "@radix-ui/themes";
+import PopOverTrigger from "./reusable/popover-trigger";
 
 export default function ContactBtn() {
-	return (
-		<Popover.Root>
-			<Popover.Trigger>
-				<button className="nav-btn">
-					<span className="glow"></span>
-					<span className="nav-btn-content">Contact Us</span>
-				</button>
-			</Popover.Trigger>
-			<Popover.Content
-				width="220px"
-				className="flex-col bg-black/[40%] text-tw text-sm leading-loose font-light text-center">
+	return PopOverTrigger({
+		TriggerElem: (
+			<button className="nav-btn">
+				<span className="glow"></span>
+				<span className="nav-btn-content">Contact Us</span>
+			</button>
+		),
+		ContentElem: (
+			<>
 				<a
 					className="block"
 					href="tel:+918825907253">
@@ -20,9 +18,12 @@ export default function ContactBtn() {
 				<a
 					className="block"
 					href="mailto:hi@effectivepc.in">
-					<span className="font-normal">Email:</span> hi@effectivepc.in
+					<span className="font-normal">Email:</span> build@effectivepc.in
 				</a>
-			</Popover.Content>
-		</Popover.Root>
-	);
+			</>
+		),
+		contentWidth: "220px",
+		contentContainerClassNames:
+			"flex-col bg-black/[40%] text-tw text-sm leading-loose font-light text-center",
+	});
 }

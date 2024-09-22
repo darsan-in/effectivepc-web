@@ -1,5 +1,6 @@
-import { FaInstagram } from "react-icons/fa6";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import { IconType } from "react-icons/lib";
+import CareerBtn from "./career-btn";
 import Logo from "./logo";
 
 export default function Footer() {
@@ -8,11 +9,15 @@ export default function Footer() {
 			href: "https://www.instagram.com/effectivepc.in/",
 			Icon: FaInstagram,
 		},
+		{
+			href: "https://www.linkedin.com/company/effectivepc",
+			Icon: FaLinkedinIn,
+		},
 	];
 
 	const footerNavs = [
 		{
-			href: "#/about",
+			href: "/#about-us",
 			name: "About",
 		},
 		{
@@ -20,7 +25,7 @@ export default function Footer() {
 			name: "Partners",
 		},
 		{
-			href: "/#faq",
+			href: "/#faqs",
 			name: "FAQ",
 		},
 		{
@@ -35,14 +40,17 @@ export default function Footer() {
 
 	return (
 		<footer className="px-4 pb-5 pt-[5%] mx-auto md:px-8 z-[2] relative leading-loose tracking-widest space-y-20 bg-black text-tw border-t border-tw/[30%]">
+			<canvas
+				className="w-[100%] h-[100%] absolute top-0 left-0"
+				id="footerBg"></canvas>
 			<div className="max-w-lg sm:mx-auto sm:text-center">
 				<Logo classNames="text-[#f00] w-[250px] mx-auto" />
-				<p className="leading-relaxed mt-2 text-[15px] font-light">
+				<p className="leading-relaxed mt-2 text-[18px] font-light">
 					We delivers custom-built computers tailored for gamers and
 					businesses. Whether you need a powerful gaming rig or bulk
 					systems for your startup, we provide top-tier PCs that maximize
-					performance and cost-efficiency. Unlock more with the perfect
-					PC—designed to fit your needs and budget.
+					performance and cost-efficiency. Unlock more with the perfect PC
+					- designed to fit your needs and budget.
 				</p>
 			</div>
 			<ul className="items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
@@ -58,6 +66,9 @@ export default function Footer() {
 						</a>
 					</li>
 				))}
+				<li>
+					<CareerBtn />
+				</li>
 			</ul>
 			<div className="mt-8 items-center justify-between sm:flex">
 				<p className="mt-4 sm:mt-0 text-sm">

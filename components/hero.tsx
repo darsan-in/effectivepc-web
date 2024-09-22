@@ -1,9 +1,11 @@
 "use client";
+import CubeEffect from "@/scripts/cube-effect";
 import heroVisualInit from "@/scripts/hero-visuals";
 import "@/styles/hero.scss";
 import { useEffect, useState } from "react";
 import BrandIcon from "./bicon";
 import ContactBtn from "./cantact-btn";
+import CareerBtn from "./career-btn";
 import Logo from "./logo";
 
 export default function Hero() {
@@ -17,7 +19,7 @@ export default function Hero() {
 	];
 
 	const Brand = () => (
-		<div className="flex items-center justify-between py-5 md:block">
+		<div className="flex items-center justify-between py-5 md:hidden">
 			<a
 				href="/"
 				className="block md:hidden">
@@ -60,7 +62,10 @@ export default function Hero() {
 	);
 
 	useEffect(() => {
-		heroVisualInit();
+		heroVisualInit({ id: "particleCanvas" });
+		/* for footer */
+		heroVisualInit({ id: "footerBg" });
+		CubeEffect();
 
 		document.onclick = (e) => {
 			const target = e.target;
@@ -72,8 +77,9 @@ export default function Hero() {
 	return (
 		<section
 			id="hero"
-			className="w-[100%] lg:h-[110vh]">
+			className="w-[100%] lg:h-[110vh] relative">
 			<canvas id="particleCanvas"></canvas>
+
 			<header>
 				<h2>
 					<div className={`md:hidden ${state ? "mx-2 pb-5" : "hidden"}`}>
@@ -110,6 +116,9 @@ export default function Hero() {
 										</li>
 									);
 								})}
+								<li>
+									<CareerBtn />
+								</li>
 								<li>
 									<ContactBtn />
 								</li>
@@ -156,13 +165,19 @@ export default function Hero() {
 				</div>
 			</div>
 
-			<p className="heroP">
-				Get the best value with custom-built PCs
-				<br /> designed to meet your needs and budget.
-			</p>
-			<button className="rgb-btn absolute top-[73%] left-[43%] z-[200]">
-				Build Yours Today
-			</button>
+			<div
+				className="relative flex-col justify-center items-center"
+				style={{ top: "12.6em" }}>
+				<p className="heroP">
+					Get the best value with custom-built PCs
+					<br /> designed to meet your needs and budget.
+				</p>
+				<a
+					href="#form"
+					className="rgb-btn z-[200] mx-auto mt-9 w-[190px] h-[40px] flex items-center justify-center">
+					Build Yours Today
+				</a>
+			</div>
 
 			<div className="mountains">
 				<div></div>

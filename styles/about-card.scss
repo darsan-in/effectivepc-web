@@ -14,7 +14,7 @@
 	display: flex;
 	color: rgb(88 199 250 / 100%);
 	transition: color 1s;
-	@apply w-[40%] flex-col leading-loose p-[4%] rounded-br-[20%] rounded-tl-[20%];
+	@apply w-[50%] flex-col leading-loose px-[6%] py-[4%] rounded-br-[20%] rounded-tl-[20%];
 }
 
 .card::before {
@@ -30,7 +30,7 @@
 .card::after,
 .card::before,
 .card > h2 {
-	animation: spin 2s linear infinite;
+	animation: spin 5s ease infinite;
 }
 .card::after {
 	position: absolute;
@@ -60,7 +60,7 @@
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	@apply text-2xl font-bold tracking-widest mb-[2%];
+	@apply text-3xl font-bold tracking-widest mb-[2%];
 }
 .card > ul {
 	@apply font-light;

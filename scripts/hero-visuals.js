@@ -1,5 +1,5 @@
-export default function heroVisualInit() {
-	const canvas = document.getElementById("particleCanvas");
+export default function heroVisualInit({ id }) {
+	const canvas = document.getElementById(id);
 	const ctx = canvas.getContext("2d");
 
 	// Initial canvas size

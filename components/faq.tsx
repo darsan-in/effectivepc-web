@@ -24,12 +24,12 @@ const FaqsCard = ({
 			className="space-y-3 mt-5 overflow-hidden"
 			key={idx}
 			onClick={handleOpenAnswer}>
-			<h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-tw font-medium">
+			<h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg font-medium">
 				{faqsList.question}
 				{state ? (
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						className="h-5 w-5 text-gray-500 ml-2"
+						className="h-5 w-5 ml-2"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke="currentColor">
@@ -43,7 +43,7 @@ const FaqsCard = ({
 				) : (
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						className="h-5 w-5 text-gray-500 ml-2"
+						className="h-5 w-5 ml-2"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke="currentColor">
@@ -61,7 +61,7 @@ const FaqsCard = ({
 				className="duration-300"
 				style={state ? { height: answerH } : { height: "0px" }}>
 				<div>
-					<p className="text-tw/[80%] text-[1.9ch]">{faqsList.answer}</p>
+					<p className="text-[1.9ch]">{faqsList.answer}</p>
 				</div>
 			</div>
 		</div>
@@ -105,16 +105,13 @@ export default function FAQ() {
 
 	return (
 		<section
-			id="faq"
-			className="leading-relaxed mx-auto px-4 md:px-8 w-full pt-[10%] pb-[4%]"
-			style={{
-				background: "linear-gradient(to bottom, #121521 0%,#000 10%)",
-			}}>
+			id="faqs"
+			className="leading-relaxed mx-auto px-4 md:px-8 w-full py-[7%] bg-[#ff0000] text-white">
 			<div className="space-y-3 text-center">
-				<h1 className="text-4xl font-semibold neon pink">
+				<h1 className="text-4xl font-semibold">
 					Frequently Asked Questions
 				</h1>
-				<p className="text-tw max-w-lg mx-auto text-lg">
+				<p className="max-w-lg mx-auto text-lg">
 					Answered all frequently asked questions, Still confused? feel
 					free to contact us.
 				</p>

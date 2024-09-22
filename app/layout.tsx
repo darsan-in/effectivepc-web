@@ -1,16 +1,7 @@
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
 import "../styles/globals.scss";
-const globFont = Manrope({
-	weight: "variable",
-	style: ["normal"],
-	subsets: ["latin"],
-	adjustFontFallback: true,
-	preload: true,
-	display: "swap",
-});
 
 export const metadata: Metadata = {
 	title: "Custom-Built PCs for Gamers & Businesses | Effective PC",
@@ -136,8 +127,15 @@ export default function RootLayout({
 					rel="yandex-tableau-widget"
 					href="/favicons/yandex-browser-manifest.json"
 				/>
+				<link
+					rel="stylesheet"
+					href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+				/>
+				<script
+					src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+					async></script>
 			</head>
-			<body className={`${globFont.className} antialiased`}>
+			<body className={`antialiased`}>
 				<Theme> {children}</Theme>
 			</body>
 		</html>

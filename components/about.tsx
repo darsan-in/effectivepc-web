@@ -1,10 +1,13 @@
 import "@/styles/about-card.scss";
+import CubeSlide from "./cube-slide";
+import LineBG from "./line-bg";
 
 const FeatureCard = () => (
-	<div className="relative h-auto mx-auto px-4 md:px-8">
-		{/* <RGBBG classNames="w-[100vw] h-[100%] left-0 top-0 z-[-2]" /> */}
+	<div className="relative h-auto mx-auto px-4 md:px-8 z-[2] pt-[7%] bg-[#000]">
+		<LineBG classNames="w-[100vw] h-[100%] left-0 top-0 z-[-2]" />
+		<div className="absolute h-[100%] w-[100%] top-0 left-0 bg-[rgba(0,0,0,0.015)]"></div>
 		<div
-			className="w-full flex pt-[15%] justify-around text-[13px]"
+			className="w-full flex justify-center pb-[10%]"
 			id="gamer">
 			<div className="card">
 				<h2>For Gamers</h2>
@@ -31,13 +34,25 @@ const FeatureCard = () => (
 				</ul>
 			</div>
 
-			<div className="comp"></div>
+			<div className="comp ml-[4%]">
+				<img
+					style={{ objectFit: "cover" }}
+					src="/src/gamer.jpg"
+					alt="gamer playing in custom built PC by effectivepc.in, without limit"
+				/>
+			</div>
 		</div>
 
 		<div
-			className="w-full flex pt-[15%] justify-around text-[13px] pb-10"
+			className="w-full flex justify-around pb-[7.5%]"
 			id="pro">
-			<div className="comp"></div>
+			<div className="comp">
+				<img
+					style={{ objectFit: "cover" }}
+					src="/src/pro.jpg"
+					alt="pro working in custom built PC by effectivepc.in, with peace and ease"
+				/>
+			</div>
 
 			<div className="card">
 				<h2>For Businesses</h2>
@@ -70,42 +85,36 @@ const FeatureCard = () => (
 
 export default function About() {
 	return (
-		<section className="max-w-screen-xl relative z-[20]">
-			<div className="flex mx-auto px-4 md:px-8">
+		<section
+			className="relative z-[20] pt-[8%] bg-[#121521]"
+			id="about-us">
+			<div className="flex mx-auto px-4 md:px-[5%] border-b border-tw/[10%]">
 				<div className="w-[60%]">
-					<div className="py-4">
+					<div className="flex-col space-y-[5%]">
 						<h3
 							className="text-3xl neon turquoise font-semibold md:text-5xl"
-							style={{ lineHeight: "3ch" }}>
-							Building Effective Custom PCs <br />
+							style={{
+								lineHeight: "2.5ch",
+							}}>
+							Building Effective PCs <br />
 							<span className="neon pink">for Gamers and Businesses</span>
 						</h3>
 						<div className="leading-loose text-tw/[90%] font-light text-[1.3ch]">
 							<p>
-								At <strong>Effective PC</strong>, we build{" "}
-								<strong>custom PCs</strong> tailored to your exact
-								needs—whether you&apos;re a <strong>gamer</strong> chasing
-								peak performance or a <strong>business</strong> seeking
-								reliable, cost-effective systems. Our expert-built rigs{" "}
-								<strong>maximize efficiency and value</strong> without the
-								extra costs.
-							</p>
-							<p className="mt-3">
-								From <strong>high-performance gaming setups</strong> to{" "}
-								<strong>productivity-boosting business machines</strong>,
-								we craft systems designed to deliver{" "}
-								<strong>exceptional results</strong>. With Effective PC,
-								you get a <strong>personalized solution</strong> that
-								combines top performance with{" "}
-								<strong>smart savings</strong>, ensuring you get the{" "}
-								<strong>best return on your investment</strong>.
+								At{" "}
+								<strong className="font-bold">Effective PC ( EPC )</strong>
+								, we specialize in building custom PCs designed precisely
+								for your needs—whether it&apos;s for high-performance
+								gaming or reliable business operations. We focus on
+								delivering systems that provide the best combination of
+								power, efficiency, and value, without unnecessary extras.
 							</p>
 						</div>
 					</div>
 					<a
-						className="group px-4 py-2 text-indigo-600 font-medium bg-indigo-50 rounded-full inline-flex items-center rgb-btn"
+						className="group px-4 mt-[4%] text-indigo-600 font-medium bg-indigo-50 rounded-full inline-flex items-center rgb-btn"
 						href="#form">
-						Try it out
+						Let&apos;s Get Start Building
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							className="h-6 w-6 ml-1 duration-150 group-hover:translate-x-1"
@@ -121,6 +130,8 @@ export default function About() {
 						</svg>
 					</a>
 				</div>
+
+				<CubeSlide />
 			</div>
 
 			<FeatureCard />
