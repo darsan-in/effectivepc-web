@@ -1,3 +1,6 @@
+import postman from "@/scripts/postman";
+import { email, phone } from "./reusable/contact-info";
+
 export default function Form() {
 	const contactMethods = [
 		{
@@ -16,7 +19,7 @@ export default function Form() {
 					/>
 				</svg>
 			),
-			contact: "build@effectivepc.in",
+			contact: email,
 		},
 		{
 			icon: (
@@ -34,7 +37,7 @@ export default function Form() {
 					/>
 				</svg>
 			),
-			contact: "+91 8825907253",
+			contact: phone,
 		},
 	];
 
@@ -68,37 +71,79 @@ export default function Form() {
 						</div>
 					</div>
 					<div className="flex-1 mt-12 sm:max-w-lg lg:max-w-md">
+						<div
+							className="w-100 py-20 hidden"
+							id="form-sts">
+							<p className="text-center text-white tracking-wide text-xl">
+								We received your request. We&apos;ll get back to you soon.
+							</p>
+						</div>
 						<form
-							onSubmit={(e) => e.preventDefault()}
+							id="form-area"
+							onSubmit={(event) => {
+								postman(2, event)
+									.then(() => {
+										const formarea = document.getElementById("form-area");
+										const status = document.getElementById("form-sts");
+
+										formarea?.classList.add("hidden");
+										status?.classList.remove("hidden");
+
+										setTimeout(() => {
+											formarea?.classList.remove("hidden");
+											status?.classList.add("hidden");
+										}, 7000);
+									})
+									.catch(console.warn);
+							}}
 							className="space-y-5">
 							<div>
-								<label className="font-medium">Name</label>
+								<label
+									className="font-medium"
+									htmlFor="name">
+									Name
+								</label>
 								<input
+									id="name"
 									type="text"
 									required
+									name="name"
 									className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border border-black focus:border-indigo-600 shadow-sm rounded-lg"
 								/>
 							</div>
 							<div>
-								<label className="font-medium">Email</label>
+								<label
+									className="font-medium"
+									htmlFor="email">
+									Email
+								</label>
 								<input
+									id="email"
 									type="email"
 									required
+									name="email"
 									className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border border-black focus:border-indigo-600 shadow-sm rounded-lg"
 								/>
 							</div>
 							<div>
-								<label className="font-medium">Phone</label>
+								<label className="font-medium">
+									Phone number{" "}
+									<span className="font-normal">(With Country Code)</span>
+								</label>
 								<input
 									type="number"
+									placeholder={"Example: " + phone}
 									required
+									name="contact"
 									className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border border-black focus:border-indigo-600 shadow-sm rounded-lg"
 								/>
 							</div>
 							<div>
 								<label className="font-medium">Your Needs</label>
 								<textarea
+									placeholder="Explain your requirement"
 									required
+									name="message"
 									className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border border-black focus:border-indigo-600 shadow-sm rounded-lg"></textarea>
 							</div>
 							<button className="w-full px-4 py-2 text-white font-medium bg-[#ff0000] hover:bg-[#ff0000]/[70%] active:bg-indigo-600 rounded-lg duration-150">

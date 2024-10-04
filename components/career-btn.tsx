@@ -1,3 +1,4 @@
+import { careerMail } from "./reusable/contact-info";
 import PopOverTrigger from "./reusable/popover-trigger";
 
 export default function CareerBtn() {
@@ -13,7 +14,7 @@ export default function CareerBtn() {
 				<>
 					<p className="text-[14px]">
 						Send your resume to{" "}
-						<span className="font-bold">join@effectivepc.in</span>
+						<span className="font-bold">{careerMail}</span>
 					</p>
 				</>
 			}

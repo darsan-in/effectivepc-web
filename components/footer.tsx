@@ -1,6 +1,8 @@
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import { IconType } from "react-icons/lib";
+import CresteemBrandMark from "./brandmark";
 import CareerBtn from "./career-btn";
+import Keywords from "./keywords";
 import Logo from "./logo";
 
 export default function Footer() {
@@ -32,10 +34,12 @@ export default function Footer() {
 			href: "/blogs",
 			name: "Blogs",
 		},
-		{
-			href: "/support",
-			name: "Support",
-		},
+	];
+
+	const policiesNavs: { href: string; name: string }[] = [
+		{ href: "/privacy-policy", name: "Privacy Policy" },
+		{ href: "/terms-conditions", name: "Terms & Conditions" },
+		{ href: "/disclaimers", name: "Disclaimers" },
 	];
 
 	return (
@@ -43,8 +47,8 @@ export default function Footer() {
 			<canvas
 				className="w-[100%] h-[100%] absolute top-0 left-0"
 				id="footerBg"></canvas>
-			<div className="max-w-lg sm:mx-auto sm:text-center">
-				<Logo classNames="text-[#f00] w-[250px] mx-auto" />
+			<div className="max-w-lg sm:mx-auto sm:text-center relative z-30">
+				<Logo classNames="text-[#f00] w-[300px] mx-auto" />
 				<p className="leading-relaxed mt-2 text-[18px] font-light">
 					We delivers custom-built computers tailored for gamers and
 					businesses. Whether you need a powerful gaming rig or bulk
@@ -70,10 +74,36 @@ export default function Footer() {
 					<CareerBtn />
 				</li>
 			</ul>
-			<div className="mt-8 items-center justify-between sm:flex">
+			<div className="flex-col text-center relative z-20">
+				<Keywords classNames="text-sm" />
+			</div>
+			<div className="mt-8 items-center justify-between sm:flex relative z-20 text-sm">
 				<p className="mt-4 sm:mt-0 text-sm">
 					&copy; 2024 Effective PC All rights reserved.
 				</p>
+
+				<nav className="flex gap-x-5 mx-10">
+					{policiesNavs.map((nav, idx) => (
+						<a
+							className="hover:underline"
+							key={idx}
+							href={nav.href}>
+							{nav.name}
+						</a>
+					))}
+				</nav>
+
+				<a
+					href="https://cresteem.com/"
+					target="_blank"
+					about="blank"
+					style={{ zIndex: 200 }}
+					className="flex justify-center items-center gap-x-2 relative">
+					{" "}
+					Made With 🚀 By
+					<CresteemBrandMark classNames="h-4" />
+				</a>
+
 				<div className="mt-6 sm:mt-0">
 					<nav className="flex items-center space-x-4">
 						{socialLinks.map((link, idx) => (

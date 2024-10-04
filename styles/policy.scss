@@ -1,0 +1,19 @@
+.policy {
+	@apply px-[10%] py-[5%] border-b text-white;
+}
+
+.head {
+	@apply font-extrabold text-4xl;
+}
+
+.policy > section {
+	@apply my-6;
+}
+
+.sub-head {
+	@apply font-bold text-2xl leading-loose;
+}
+
+.policy p:not(.sub-head) {
+	@apply tracking-widest leading-relaxed my-3;
+}

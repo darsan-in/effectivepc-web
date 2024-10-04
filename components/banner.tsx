@@ -1,3 +1,4 @@
+import { phone, supportMail } from "./reusable/contact-info";
 import PopOverTrigger from "./reusable/popover-trigger";
 
 export default function Banner() {
@@ -65,10 +66,12 @@ export default function Banner() {
 					</p>
 					<div className="bg-gray-800 p-5 rounded-xl">
 						<p className="text-[17px]">
-							<span className="font-bold">Contact: </span>+91-8825907253
+							<span className="font-bold">Contact: </span>
+							{phone}
 						</p>
 						<p className="text-[17px]">
-							<span className="font-bold">Email: </span>help@effectivepc.in
+							<span className="font-bold">Email: </span>
+							{supportMail}
 						</p>
 					</div>
 				</>
@@ -92,12 +95,12 @@ export default function Banner() {
 						perfect system at no extra cost. <OfferAction />
 					</p>
 				</div>
-				<CloseBtn
+				{/* <CloseBtn
 					onclick={() => {
 						document.getElementById("banner")?.remove();
 					}}
 					classNames="p-2 rounded-lg duration-150 hover:bg-tw ring-offset-2 focus:ring"
-				/>
+				/> */}
 			</div>
 		</div>
 	);

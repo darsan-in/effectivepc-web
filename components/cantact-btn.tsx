@@ -1,3 +1,4 @@
+import { email, phone } from "./reusable/contact-info";
 import PopOverTrigger from "./reusable/popover-trigger";
 
 export default function ContactBtn() {
@@ -13,12 +14,12 @@ export default function ContactBtn() {
 				<a
 					className="block"
 					href="tel:+918825907253">
-					<span className="font-normal">Contact:</span> +91-8825907253
+					<span className="font-normal">Contact:</span> {phone}
 				</a>
 				<a
 					className="block"
 					href="mailto:hi@effectivepc.in">
-					<span className="font-normal">Email:</span> build@effectivepc.in
+					<span className="font-normal">Email:</span> {email}
 				</a>
 			</>
 		),
