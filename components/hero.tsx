@@ -3,9 +3,8 @@ import CubeEffect from "@/scripts/cube-effect";
 import heroVisualInit from "@/scripts/hero-visuals";
 import "@/styles/hero.scss";
 import { useEffect, useState } from "react";
-import BrandIcon from "./bicon";
 import ContactBtn from "./cantact-btn";
-import CareerBtn from "./career-btn";
+import HeroLogo from "./herologo";
 import Logo from "./logo";
 
 export default function Hero() {
@@ -15,17 +14,15 @@ export default function Hero() {
 		{ title: "About", path: "/#about-us" },
 		{ title: "Partners", path: "/#partners" },
 		{ title: "FAQ", path: "/#faqs" },
+		{ title: "Shop", path: "/shop" },
 		{ title: "Blogs", path: "/blogs" },
 	];
 
 	const Brand = () => (
-		<div className="flex items-center justify-between py-5 md:hidden">
-			<a
-				href="/"
-				className="block md:hidden">
-				<Logo classNames="text-white w-[150px]" />
-			</a>
-			<div className="md:hidden">
+		<div className="flex items-center justify-between py-5 lg:hidden">
+			<Logo classNames="text-white w-[150px] block lg:hidden" />
+
+			<div className="lg:hidden">
 				<button
 					className="menu-btn text-gray-400 hover:text-gray-300"
 					onClick={() => setState(!state)}>
@@ -77,12 +74,12 @@ export default function Hero() {
 	return (
 		<section
 			id="hero"
-			className="w-[100%] lg:h-[110vh] relative">
+			className="w-[100%] h-[40em] lg:h-[110vh] relative">
 			<canvas id="particleCanvas"></canvas>
 
 			<header>
 				<h2>
-					<div className={`md:hidden ${state ? "mx-2 pb-5" : "hidden"}`}>
+					<div className={`lg:hidden ${state ? "mx-2 pb-5" : "hidden"}`}>
 						<Brand />
 					</div>
 				</h2>
@@ -90,16 +87,16 @@ export default function Hero() {
 				<nav
 					className={`pb-5 md:text-sm ${
 						state
-							? "absolute z-20 top-0 inset-x-0 bg-gray-800 rounded-xl mx-2 mt-2 md:mx-0 md:mt-0 md:relative md:bg-transparent"
+							? "absolute z-20 top-0 inset-x-0 bg-gray-800 rounded-xl mx-2 mt-2 lg:mx-0 lg:mt-0 lg:relative lg:bg-transparent"
 							: ""
 					}`}>
-					<div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
+					<div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 lg:flex lg:px-8">
 						<Brand />
 						<div
-							className={`flex-1 items-center mt-8 md:mt-0 md:flex ${
+							className={`flex-1 items-center mt-8 lg:mt-0 lg:flex ${
 								state ? "block" : "hidden"
 							} `}>
-							<ul className="flex-1 justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+							<ul className="flex-1 justify-end items-center space-y-6 lg:flex lg:space-x-6 lg:space-y-0">
 								{navigation.map((item, idx) => {
 									return (
 										<li
@@ -116,9 +113,7 @@ export default function Hero() {
 										</li>
 									);
 								})}
-								<li>
-									<CareerBtn />
-								</li>
+
 								<li>
 									<ContactBtn />
 								</li>
@@ -152,16 +147,9 @@ export default function Hero() {
 			<div className="heroSubP">
 				<p>Tailored for Gamers. Optimized for Businesses.</p>
 			</div>
-			<div className="hero">
+			<div className="hero hidden lg:block">
 				<div className="heroT">
-					{new Array(2).fill("").map((_elem, key) => (
-						<h2 key={key}>
-							<span>
-								<BrandIcon classNames="w-[1.9ch] inline -top-[0.2ch] left-[0.15ch] relative" />
-							</span>
-							ffective PC
-						</h2>
-					))}
+					<HeroLogo classNames="text-accent w-[50%] mx-auto" />
 				</div>
 			</div>
 

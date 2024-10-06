@@ -2,7 +2,9 @@ import "@/styles/cube.scss";
 
 export default function CubeSlide() {
 	return (
-		<div id="cube-slide">
+		<div
+			id="cube-slide"
+			className="order-1 lg:order-2">
 			<div
 				className="swiper"
 				dir="rtl">

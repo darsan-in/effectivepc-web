@@ -3,7 +3,9 @@
 	initial-value: 132deg;
 	inherits: false;
 }
-
+.card:nth-child(1) {
+	@apply text-purple-200;
+}
 .card {
 	background: #191c29;
 	position: relative;
@@ -14,7 +16,7 @@
 	display: flex;
 	color: rgb(88 199 250 / 100%);
 	transition: color 1s;
-	@apply w-[50%] flex-col leading-loose px-[6%] py-[4%] rounded-br-[20%] rounded-tl-[20%];
+	@apply w-[85%] lg:w-[50%] flex-col leading-loose px-[6%] py-[4%] rounded-br-[20%] rounded-tl-[20%] mx-auto;
 }
 
 .card::before {
@@ -32,7 +34,7 @@
 .card > h2 {
 	animation: spin 5s ease infinite;
 }
-.card::after {
+/* .card::after {
 	position: absolute;
 	content: "";
 	top: calc(var(--card-height) / 6);
@@ -46,7 +48,7 @@
 	filter: blur(calc(var(--card-height) / 6));
 	opacity: 1;
 	transition: opacity 0.5s;
-}
+} */
 
 @keyframes spin {
 	0% {
@@ -85,14 +87,15 @@
 		var(--pink),
 		var(--red)
 	);
-	border-top-left-radius: 20%;
+
+	border-bottom-right-radius: 20%;
 }
 
 #pro > .card::before,
 #pro > .card::after,
 #pro > .card > h2 {
 	background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
-	border-bottom-right-radius: 20%;
+	border-top-left-radius: 20%;
 }
 
 .card:hover {
@@ -100,5 +103,5 @@
 }
 
 .comp {
-	@apply w-[40%] flex;
+	@apply w-[85%] lg:w-[40%] flex mx-auto;
 }

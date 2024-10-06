@@ -83,14 +83,14 @@ export default function Banner() {
 
 	return (
 		<div
-			className="bg-[#9dc3f7]"
+			className="bg-accent"
 			id="banner">
-			<div className="max-w-screen-xl mx-auto px-4 flex items-start justify-between text-black sm:items-center md:px-8 py-[0.5%]">
-				<div className="flex-1 justify-center flex items-start gap-x-4 sm:items-center">
-					<div className="flex-none p-1.5 px-4 rounded-full bg-[#05060f] flex items-center justify-center font-medium text-sm text-tw">
+			<div className="max-w-screen-xl mx-auto px-4 flex items-start justify-between text-black sm:items-center md:px-8 py-[0.3%]">
+				<div className="flex-1 justify-center flex items-start gap-x-4 sm:items-center lg:flex-row flex-col">
+					<div className="flex-none p-1 px-3 rounded-full bg-[#05060f] flex items-center justify-center font-medium text-sm text-tw">
 						Entry Offer
 					</div>
-					<p className="font-medium p-2 text-[16px]">
+					<p className="font-medium p-2 text-sm">
 						Free PC consultation and expert guidance to help you build the
 						perfect system at no extra cost. <OfferAction />
 					</p>

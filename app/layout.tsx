@@ -1,7 +1,17 @@
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import type { Metadata } from "next";
+import { Nunito } from "next/font/google";
 import "../styles/globals.scss";
+
+const Font = Nunito({
+	weight: ["300", "400", "500", "600", "700"],
+	variable: "--font-def",
+	style: ["normal", "italic"],
+	preload: true,
+	display: "swap",
+	subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
 	title: "Custom-Built PCs for Gamers & Businesses | Effective PC",
@@ -15,7 +25,9 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html
+			lang="en"
+			className={Font.variable + " antialiased"}>
 			<head>
 				<link
 					rel="icon"
@@ -24,21 +36,21 @@ export default function RootLayout({
 				/>
 				<link
 					rel="icon"
-					type="image/png"
+					type="image/webp"
 					sizes="16x16"
-					href="/favicons/favicon-16x16.png"
+					href="/favicons/favicon-16x16.webp"
 				/>
 				<link
 					rel="icon"
-					type="image/png"
+					type="image/webp"
 					sizes="32x32"
-					href="/favicons/favicon-32x32.png"
+					href="/favicons/favicon-32x32.webp"
 				/>
 				<link
 					rel="icon"
-					type="image/png"
+					type="image/webp"
 					sizes="48x48"
-					href="/favicons/favicon-48x48.png"
+					href="/favicons/favicon-48x48.webp"
 				/>
 				<link
 					rel="manifest"
@@ -59,57 +71,57 @@ export default function RootLayout({
 				<link
 					rel="apple-touch-icon"
 					sizes="57x57"
-					href="/favicons/apple-touch-icon-57x57.png"
+					href="/favicons/apple-touch-icon-57x57.webp"
 				/>
 				<link
 					rel="apple-touch-icon"
 					sizes="60x60"
-					href="/favicons/apple-touch-icon-60x60.png"
+					href="/favicons/apple-touch-icon-60x60.webp"
 				/>
 				<link
 					rel="apple-touch-icon"
 					sizes="72x72"
-					href="/favicons/apple-touch-icon-72x72.png"
+					href="/favicons/apple-touch-icon-72x72.webp"
 				/>
 				<link
 					rel="apple-touch-icon"
 					sizes="76x76"
-					href="/favicons/apple-touch-icon-76x76.png"
+					href="/favicons/apple-touch-icon-76x76.webp"
 				/>
 				<link
 					rel="apple-touch-icon"
 					sizes="114x114"
-					href="/favicons/apple-touch-icon-114x114.png"
+					href="/favicons/apple-touch-icon-114x114.webp"
 				/>
 				<link
 					rel="apple-touch-icon"
 					sizes="120x120"
-					href="/favicons/apple-touch-icon-120x120.png"
+					href="/favicons/apple-touch-icon-120x120.webp"
 				/>
 				<link
 					rel="apple-touch-icon"
 					sizes="144x144"
-					href="/favicons/apple-touch-icon-144x144.png"
+					href="/favicons/apple-touch-icon-144x144.webp"
 				/>
 				<link
 					rel="apple-touch-icon"
 					sizes="152x152"
-					href="/favicons/apple-touch-icon-152x152.png"
+					href="/favicons/apple-touch-icon-152x152.webp"
 				/>
 				<link
 					rel="apple-touch-icon"
 					sizes="167x167"
-					href="/favicons/apple-touch-icon-167x167.png"
+					href="/favicons/apple-touch-icon-167x167.webp"
 				/>
 				<link
 					rel="apple-touch-icon"
 					sizes="180x180"
-					href="/favicons/apple-touch-icon-180x180.png"
+					href="/favicons/apple-touch-icon-180x180.webp"
 				/>
 				<link
 					rel="apple-touch-icon"
 					sizes="1024x1024"
-					href="/favicons/apple-touch-icon-1024x1024.png"
+					href="/favicons/apple-touch-icon-1024x1024.webp"
 				/>
 				<meta
 					name="apple-mobile-web-app-capable"
@@ -135,7 +147,7 @@ export default function RootLayout({
 					src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
 					async></script>
 			</head>
-			<body className={`antialiased`}>
+			<body>
 				<Theme> {children}</Theme>
 			</body>
 		</html>

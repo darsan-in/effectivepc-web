@@ -7,8 +7,16 @@ const FeatureCard = () => (
 		<LineBG classNames="w-[100vw] h-[100%] left-0 top-0 z-[-2]" />
 		<div className="absolute h-[100%] w-[100%] top-0 left-0 bg-[rgba(0,0,0,0.015)]"></div>
 		<div
-			className="w-full flex justify-center pb-[10%]"
+			className="w-full flex flex-col lg:flex-row justify-center pb-[10%] gap-y-5"
 			id="gamer">
+			<div className="comp ml-[4%]">
+				<img
+					style={{ objectFit: "cover" }}
+					src="/src/gamer.jpg"
+					alt="gamer playing in custom built PC by effectivepc.in, without limit"
+				/>
+			</div>
+
 			<div className="card">
 				<h2>For Gamers</h2>
 				<ul>
@@ -33,27 +41,11 @@ const FeatureCard = () => (
 					</li>
 				</ul>
 			</div>
-
-			<div className="comp ml-[4%]">
-				<img
-					style={{ objectFit: "cover" }}
-					src="/src/gamer.jpg"
-					alt="gamer playing in custom built PC by effectivepc.in, without limit"
-				/>
-			</div>
 		</div>
 
 		<div
-			className="w-full flex justify-around pb-[7.5%]"
+			className="w-full flex justify-around pb-[7.5%] flex flex-col lg:flex-row gap-y-5"
 			id="pro">
-			<div className="comp">
-				<img
-					style={{ objectFit: "cover" }}
-					src="/src/pro.jpg"
-					alt="pro working in custom built PC by effectivepc.in, with peace and ease"
-				/>
-			</div>
-
 			<div className="card">
 				<h2>For Businesses</h2>
 				<ul>
@@ -79,6 +71,14 @@ const FeatureCard = () => (
 					</li>
 				</ul>
 			</div>
+
+			<div className="comp">
+				<img
+					style={{ objectFit: "cover" }}
+					src="/src/pro.jpg"
+					alt="pro working in custom built PC by effectivepc.in, with peace and ease"
+				/>
+			</div>
 		</div>
 	</div>
 );
@@ -88,8 +88,8 @@ export default function About() {
 		<section
 			className="relative z-[20] pt-[8%] bg-[#121521]"
 			id="about-us">
-			<div className="flex mx-auto px-4 md:px-[5%] border-b border-tw/[10%]">
-				<div className="w-[60%]">
+			<div className="flex flex-col lg:flex-row mx-auto px-4 md:px-[5%] border-b border-tw/[10%]">
+				<div className="lg:w-[60%] order-2 lg:order-1">
 					<div className="flex-col space-y-[5%]">
 						<h3
 							className="text-3xl neon turquoise font-semibold md:text-5xl"

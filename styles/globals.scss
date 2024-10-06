@@ -6,6 +6,7 @@
 	box-sizing: border-box;
 	text-rendering: optimizeLegibility;
 	scroll-behavior: smooth;
+	font-family: var(--font-def) !important;
 }
 
 html::-webkit-scrollbar {
@@ -14,14 +15,18 @@ html::-webkit-scrollbar {
 html {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
-	font-family: '"Hubot-Sans", sans-serif';
 }
 
 main,
-body,
-html {
+body {
 	background: #000 linear-gradient(0deg, rgba(216, 236, 248, 0.05), rgba(152, 192, 239, 0.05)) !important;
 }
+
+main,
+body {
+	overflow-x: hidden !important;
+}
+
 @property --p {
 	syntax: "<percentage>";
 	inherits: false;

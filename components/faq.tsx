@@ -1,5 +1,6 @@
 import "@/styles/neon.scss";
 import { useRef, useState } from "react";
+import { phone } from "./reusable/contact-info";
 const FaqsCard = ({
 	faqsList,
 	idx,
@@ -94,21 +95,47 @@ export default function FAQ() {
 			question:
 				"What kind of warranty do you offer on your custom-built PCs?",
 			answer:
-				"All our custom PCs come with a 1-year warranty covering parts and labor. We stand by our quality and offer customer support to ensure your system runs smoothly.",
+				"We provide a manufacturer-level warranty, meaning the warranty is applicable to the individual components used in your custom-built PC. If any component has issues, we will assist you in obtaining warranty support from the manufacturer, based on the warranty period specified by each brand.",
 		},
 		{
 			question: "How can I place an order for a custom-built PC?",
+			answer: `You can place an order by filling out the form available on our website. Additionally, you can call us ( ${phone} ) directly to request a custom-built PC and discuss your specific requirements.`,
+		},
+		{
+			question: "Why should I choose Effective PC for my custom build?",
 			answer:
-				"Placing an order is simple. Just visit our website at effectivepc.in, choose your desired configuration, and follow the checkout process. For bulk or custom requests, you can contact us directly.",
+				"At Effective PC, we specialize in building custom PCs tailored to your exact needs, whether you're a gamer looking for high performance or a business requiring reliable systems. We focus on maximizing value and performance within your budget.",
+		},
+		{
+			question:
+				"Do you offer custom builds for both gaming and business use?",
+			answer:
+				"Yes, we create custom PCs for both gamers and businesses. Our gaming PCs are optimized for top performance, while our business systems focus on reliability and efficiency.",
+		},
+		{
+			question: "What is the process for getting a custom-built PC?",
+			answer:
+				"We start by understanding your requirements, budget, and performance needs. From there, we design and build a PC that perfectly suits your specifications, ensuring it’s optimized for your use case.",
+		},
+		{
+			question:
+				"What kind of support do you provide after building the PC?",
+			answer:
+				"We provide ongoing support for all PCs we build, including hardware troubleshooting, upgrades, and performance optimizations to ensure your system runs smoothly.",
+		},
+		{
+			question: "How does a custom PC from Effective PC save me money?",
+			answer:
+				"By customizing every component based on your specific needs, we eliminate unnecessary costs and ensure that every rupee is spent effectively. This results in a high-performing PC tailored to your budget.",
 		},
 	];
 
 	return (
 		<section
 			id="faqs"
-			className="leading-relaxed mx-auto px-4 md:px-8 w-full py-[7%] bg-[#ff0000] text-white">
+			className="leading-relaxed mx-auto px-4 md:px-8 w-full py-[7%] bg-black text-white">
 			<div className="space-y-3 text-center">
-				<h1 className="text-4xl font-semibold">
+				<h1 className="text-4xl font-semibold text-accent">
 					Frequently Asked Questions
 				</h1>
 				<p className="max-w-lg mx-auto text-lg">

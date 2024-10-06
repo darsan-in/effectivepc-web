@@ -16,14 +16,14 @@ export default function Testimonials() {
 		},
 		{
 			avatar: "https://randomuser.me/api/portraits/men/86.jpg",
-			name: "Prasanna",
-			title: "VIP",
-			quote: "Blah blah",
+			name: "Balaji",
+			title: "",
+			quote: "In Progress",
 		},
 	];
 
 	return (
-		<section className="relative py-[7%] text-white bg-white leading-loose tracking-wide">
+		<section className="relative py-[7%] text-gray-50 bg-white leading-loose tracking-wide">
 			<div className="relative z-10 max-w-screen-xl mx-auto px-4 md:px-8">
 				<div className="max-w-xl sm:text-center md:mx-auto">
 					<h3 className="text-3xl font-semibold sm:text-4xl text-black">
@@ -60,21 +60,21 @@ export default function Testimonials() {
 								</div>
 								<figure>
 									<blockquote>
-										<p className="text-gray-800 text-lg font-semibold px-4 py-1">
+										<p className="text-gray-800 text-lg font-semibold px-4 py-1 italic">
 											{item.quote}
 										</p>
 									</blockquote>
-									<div className="flex items-center gap-x-4 p-4 mt-6 bg-indigo-50">
+									<div className="flex items-center gap-x-4 p-4 mt-6 bg-tw">
 										<img
 											src={item.avatar}
-											className="w-16 h-16 rounded-full border-2 border-indigo-500"
+											className="w-16 h-16 rounded-full border-2 border-accent"
 											alt=""
 										/>
 										<div>
 											<span className="block text-gray-800 font-semibold">
 												{item.name}
 											</span>
-											<span className="block text-indigo-600 text-sm mt-0.5">
+											<span className="block text-blue-500 text-sm mt-0.5">
 												{item.title}
 											</span>
 										</div>
@@ -85,12 +85,7 @@ export default function Testimonials() {
 					</ul>
 				</div>
 			</div>
-			<div
-				className="absolute top-0 w-full h-[38%]"
-				style={{
-					background:
-						"linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)",
-				}}></div>
+			<div className="absolute top-0 w-full h-[38%] bg-tw"></div>
 		</section>
 	);
 }

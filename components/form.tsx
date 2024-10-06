@@ -43,19 +43,19 @@ export default function Form() {
 
 	return (
 		<section
-			className="py-[7%] bg-[#ffe100] text-black"
+			className="py-[7%] bg-white text-black"
 			id="form">
 			<div className="max-w-screen-xl mx-auto px-4 md:px-8">
 				<div className="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
 					<div className="max-w-lg space-y-3">
-						<h3 className="font-semibold">Contact</h3>
+						<h3 className="font-semibold text-primary">Contact</h3>
 						<p className="text-3xl font-semibold sm:text-4xl">
 							Let us know how we can help
 						</p>
-						<p className="text-[2.2ch] pt-[1ch]">
+						<p className="text-[1.8ch] pt-[1ch]">
 							We’re here to help and answer any question you might have, We
 							look forward to hearing from you! Please fill out the form,
-							or us the contact information bellow .
+							or us the contact information below .
 						</p>
 						<div>
 							<ul className="mt-6 flex flex-wrap gap-x-10 gap-y-6 items-center">
@@ -63,7 +63,9 @@ export default function Form() {
 									<li
 										key={idx}
 										className="flex items-center gap-x-3">
-										<div className="flex-none">{item.icon}</div>
+										<div className="flex-none text-primary">
+											{item.icon}
+										</div>
 										<p className="text-[2ch]">{item.contact}</p>
 									</li>
 								))}
@@ -74,7 +76,7 @@ export default function Form() {
 						<div
 							className="w-100 py-20 hidden"
 							id="form-sts">
-							<p className="text-center text-white tracking-wide text-xl">
+							<p className="text-center text-black tracking-wide text-xl">
 								We received your request. We&apos;ll get back to you soon.
 							</p>
 						</div>
@@ -108,6 +110,7 @@ export default function Form() {
 									type="text"
 									required
 									name="name"
+									placeholder="Your name?"
 									className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border border-black focus:border-indigo-600 shadow-sm rounded-lg"
 								/>
 							</div>
@@ -122,6 +125,7 @@ export default function Form() {
 									type="email"
 									required
 									name="email"
+									placeholder="Example: yourname@email.com"
 									className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border border-black focus:border-indigo-600 shadow-sm rounded-lg"
 								/>
 							</div>
@@ -146,7 +150,7 @@ export default function Form() {
 									name="message"
 									className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border border-black focus:border-indigo-600 shadow-sm rounded-lg"></textarea>
 							</div>
-							<button className="w-full px-4 py-2 text-white font-medium bg-[#ff0000] hover:bg-[#ff0000]/[70%] active:bg-indigo-600 rounded-lg duration-150">
+							<button className="w-full px-4 py-2 text-white font-medium bg-primary hover:bg-red-700 active:bg-indigo-600 rounded-lg duration-150">
 								Submit
 							</button>
 						</form>

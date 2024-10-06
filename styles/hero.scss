@@ -1,12 +1,12 @@
-@import url("https://fonts.cdnfonts.com/css/hubot-sans");
+/* @import url("https://fonts.cdnfonts.com/css/hubot-sans"); */
 
 #hero {
 	margin: 0;
 }
 
-h2 {
+/* h2 {
 	font-family: "Hubot-Sans", sans-serif;
-}
+} */
 h2,
 p {
 	margin: 0;
@@ -180,7 +180,7 @@ canvas#particleCanvas {
 	pointer-events: none;
 	animation: load 0.4s ease-in-out forwards;
 	z-index: 1;
-	width: 100%;
+	width: 100vw;
 }
 
 p {
@@ -214,7 +214,7 @@ p {
 		opacity: 1;
 	}
 }
-.heroT > h2 {
+/* .heroT > h2 {
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -257,7 +257,7 @@ p {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	filter: blur(16px) opacity(0.4);
-}
+} */
 @keyframes pulse {
 	0% {
 		--p: 0%;
@@ -744,3 +744,23 @@ p {
 	}
 }
 /*  */
+
+/* Hide the spinners in Chrome, Edge, Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Hide the spinner in Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+@media screen and (max-width: 1024px) {
+	.rgb-btn {
+		font-size: 16px;
+		height: 7ch;
+		text-align: center;
+	}
+}

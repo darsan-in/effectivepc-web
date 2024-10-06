@@ -111,11 +111,11 @@ export default function Features() {
 	];
 
 	return (
-		<section className="py-[8%] text-white">
+		<section className="py-[8%] text-white bg-black">
 			<div className="max-w-screen-xl mx-auto px-4 md:px-8">
 				<div className="max-w-2xl space-y-3">
 					<h3
-						className="text-3xl font-semibold sm:text-4xl text-[#9dc3f7]"
+						className="text-3xl font-semibold sm:text-4xl text-accent"
 						style={{ lineHeight: "2.7ch" }}>
 						Why EPC is Best to Build Your PC?
 					</h3>
@@ -132,7 +132,7 @@ export default function Features() {
 							<li
 								key={idx}
 								className="flex gap-x-4 text-[1.5ch]">
-								<div className="flex-none w-12 h-12 bg-[#9dc3f7] text-black rounded-lg flex items-center justify-center">
+								<div className="flex-none w-12 h-12 bg-accent text-black rounded-lg flex items-center justify-center">
 									{item.icon}
 								</div>
 								<div className="space-y-3">

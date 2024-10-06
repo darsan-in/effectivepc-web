@@ -1,7 +1,6 @@
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 import { IconType } from "react-icons/lib";
 import CresteemBrandMark from "./brandmark";
-import CareerBtn from "./career-btn";
 import Keywords from "./keywords";
 import Logo from "./logo";
 
@@ -30,6 +29,7 @@ export default function Footer() {
 			href: "/#faqs",
 			name: "FAQ",
 		},
+		{ name: "Shop", href: "/shop" },
 		{
 			href: "/blogs",
 			name: "Blogs",
@@ -43,7 +43,7 @@ export default function Footer() {
 	];
 
 	return (
-		<footer className="px-4 pb-5 pt-[5%] mx-auto md:px-8 z-[2] relative leading-loose tracking-widest space-y-20 bg-black text-tw border-t border-tw/[30%]">
+		<footer className="px-4 pb-5 mx-auto md:px-8 z-[2] relative leading-loose tracking-widest space-y-20 bg-black text-tw border-t border-tw/[30%]">
 			<canvas
 				className="w-[100%] h-[100%] absolute top-0 left-0"
 				id="footerBg"></canvas>
@@ -70,9 +70,6 @@ export default function Footer() {
 						</a>
 					</li>
 				))}
-				<li>
-					<CareerBtn />
-				</li>
 			</ul>
 			<div className="flex-col text-center relative z-20">
 				<Keywords classNames="text-sm" />
