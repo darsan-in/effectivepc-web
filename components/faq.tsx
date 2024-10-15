@@ -1,3 +1,4 @@
+"use client";
 import "@/styles/neon.scss";
 import { useRef, useState } from "react";
 import { phone } from "./reusable/contact-info";
@@ -143,7 +144,7 @@ export default function FAQ() {
 					free to contact us.
 				</p>
 			</div>
-			<div className="mt-14 max-w-2xl mx-auto">
+			<div className="mt-14 max-w-2xl mx-auto px-5">
 				{faqsList.map(
 					(item: { question: string; answer: string }, idx: number) => (
 						// eslint-disable-next-line react/jsx-key

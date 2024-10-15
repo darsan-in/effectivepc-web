@@ -20,10 +20,8 @@ h2 a {
 header {
 	display: flex;
 	width: 100%;
-	justify-content: center;
 	color: #bad6f7;
-	padding: 2em;
-	padding-top: 1.5em;
+
 	position: relative;
 	top: 0;
 	left: 0;
@@ -35,6 +33,8 @@ header {
 	animation:
 		load 2s ease-in 2s forwards,
 		up 1.4s ease-out 2s forwards;
+
+	@apply lg:p-[2em] lg:justify-center lg:pt-[1.5em];
 }
 header > :nth-child(1) {
 	font-size: 1em;
@@ -70,35 +70,47 @@ header > div.mid-spot {
 	box-shadow: 0 0 1em 0 #98c0ef;
 	cursor: pointer;
 	transition: box-shadow 1s ease-in-out;
+	z-index: 5;
+	@apply mt-[12em] lg:mt-0;
+	animation: mooncycle 3s linear 0s infinite alternate;
 }
 header > div.mid-spot:hover {
 	box-shadow: -0.3em 0.1em 0.2em 0 #d8bd10;
 }
 
+@keyframes mooncycle {
+	from {
+		box-shadow: 0 0 1em 0 #98c0ef;
+	}
+	to {
+		box-shadow: -0.3em 0.1em 0.2em 0 #d8bd10;
+	}
+}
+
+.spotlight {
+	animation: colorize 3s linear 0s infinite alternate;
+}
+
 header > :nth-child(2):hover ~ .spotlight {
-	animation: colorize 10s linear infinite;
+	animation: colorize 5s linear infinite;
 }
 @keyframes colorize {
 	0% {
 		filter: hue-rotate(0deg);
 	}
 	100% {
-		filter: hue-rotate(-380deg);
+		filter: hue-rotate(-180deg);
 	}
 }
 
 header .spotlight {
 	pointer-events: none;
 	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
 	margin: 0 auto;
 	transition: filter 1s ease-in-out;
-
 	height: 42em;
-	width: 100%;
 	overflow: hidden;
+	@apply w-[130%] lg:w-[100%] top-[10em] -left-[15vw] lg:left-0 lg:right-0 lg:top-0;
 }
 header .spotlight > div {
 	border-radius: 0 0 50% 50%;
@@ -175,12 +187,12 @@ header .spotlight > div:nth-child(2) {
 	}
 }
 
-canvas#particleCanvas {
+#particleCanvas {
 	position: absolute;
 	pointer-events: none;
 	animation: load 0.4s ease-in-out forwards;
-	z-index: 1;
-	width: 100vw;
+	z-index: -1;
+	width: 100%;
 }
 
 p {
@@ -258,7 +270,7 @@ p {
 	-webkit-text-fill-color: transparent;
 	filter: blur(16px) opacity(0.4);
 } */
-@keyframes pulse {
+/* @keyframes pulse {
 	0% {
 		--p: 0%;
 	}
@@ -268,7 +280,7 @@ p {
 	100% {
 		--p: 300%;
 	}
-}
+} */
 
 .heroP {
 	font-size: 1.2em;
@@ -288,6 +300,19 @@ p {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
+@media screen and (max-width: 400px) {
+	.heroP {
+		@apply text-[1.1em];
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.heroP {
+		@apply text-[0.9em];
+	}
+}
+
 @keyframes up {
 	100% {
 		translate: 0;
@@ -306,7 +331,22 @@ p {
 	animation:
 		load3 2s ease-in 0s forwards,
 		up 1.4s ease-out 0s forwards;
+	@apply w-[60vw];
 }
+
+@media screen and (max-width: 340px) {
+	.heroSubP {
+		@apply w-[80vw];
+	}
+	header .spotlight {
+		@apply -left-[24vw];
+	}
+}
+
+.accent-lines > div > div {
+	@apply hidden;
+}
+
 @keyframes load3 {
 	0% {
 		opacity: 0;
@@ -352,14 +392,16 @@ p {
 	background: linear-gradient(-90deg, #9dc3f7 0%, transparent 100%);
 	right: 120%;
 	translate: -5em 0;
+	@apply hidden lg:block;
 }
 .heroSubP p::after {
 	background: linear-gradient(90deg, #9dc3f7 0%, transparent 100%);
 	left: 120%;
 	translate: 5em 0;
+	@apply hidden lg:block;
 }
 
-.accent-lines {
+/* .accent-lines {
 	pointer-events: none;
 	position: absolute;
 	top: -11%;
@@ -393,20 +435,20 @@ p {
 	animation: accentload 2s ease-out 2.4s forwards;
 }
 .accent-lines > div:nth-child(1) > div:nth-child(1) {
-	/* top: 6em; */
+	// top: 6em; 
 	display: none;
 }
 .accent-lines > div:nth-child(1) > div:nth-child(2) {
-	top: 10em;
+	top: 11.5em;
 }
 .accent-lines > div:nth-child(1) > div:nth-child(3) {
-	top: 12.5em;
+	top: 13.5em;
 }
 .accent-lines > div:nth-child(1) > div:nth-child(4) {
-	top: 24em;
+	top: 25em;
 }
 .accent-lines > div:nth-child(1) > div:nth-child(5) {
-	top: 29em;
+	top: 30em;
 }
 .accent-lines > div:nth-child(2) > div {
 	position: absolute;
@@ -435,19 +477,19 @@ p {
 	animation: accentload 2s ease-out 2s forwards;
 }
 .accent-lines > div:nth-child(2) > div:nth-child(1) {
-	/* left: 74em; */
+	// left: 74em; 
 	display: none;
 }
 .accent-lines > div:nth-child(2) > div:nth-child(2) {
-	/* left: 61em; */
+	// left: 61em; 
 	display: none;
 }
 .accent-lines > div:nth-child(2) > div:nth-child(3) {
-	/* right: 74em; */
+	// right: 74em; 
 	display: none;
 }
 .accent-lines > div:nth-child(2) > div:nth-child(4) {
-	/* right: 61em; */
+	// right: 61em;
 	display: none;
 }
 
@@ -496,14 +538,13 @@ p {
 
 .accent-lines > div:nth-child(1) > div:nth-child(2)::before,
 .accent-lines > div:nth-child(1) > div:nth-child(2)::after {
-	/* display: block;
+	display: block;
 	width: 2em;
 	height: 1px;
 	border-radius: 0;
-	opacity: 0.12; */
-	display: none;
-}
-.accent-lines > div:nth-child(1) > div:nth-child(2)::before {
+	opacity: 0.12;
+} */
+/* .accent-lines > div:nth-child(1) > div:nth-child(2)::before {
 	right: 24em;
 	rotate: 45deg;
 	translate: -2.5em 2.5em;
@@ -573,7 +614,7 @@ p {
 		scale: 1;
 		transform: rotate(0deg);
 	}
-}
+} */
 
 .mountains {
 	position: absolute;
@@ -676,7 +717,6 @@ p {
 .rgb-btn {
 	border: calc(0.08 * var(--m)) solid transparent;
 	position: relative;
-	color: #f3f3f3;
 	font-size: var(--m);
 	border-radius: calc(0.7 * var(--m));
 	padding: calc(0.5 * var(--m)) calc(1 * var(--m));
@@ -700,6 +740,8 @@ p {
 	background-clip: padding-box, border-box, border-box;
 	background-size: 200%;
 	animation: animate 2s infinite linear;
+	@apply text-tw text-center text-[16px] lg:text-xl;
+	z-index: 5;
 }
 
 .rgb-btn::before {
@@ -757,10 +799,27 @@ input[type="number"] {
 	-moz-appearance: textfield;
 }
 
-@media screen and (max-width: 1024px) {
-	.rgb-btn {
-		font-size: 16px;
-		height: 7ch;
-		text-align: center;
-	}
+header {
+	z-index: 4;
+}
+
+.mountains,
+.accent-lines {
+	z-index: 2;
+}
+
+.spotlight {
+	z-index: 1;
+}
+
+.hero,
+.heroP,
+.heroSubP,
+.heroT,
+.rgb-btn {
+	z-index: 3;
+}
+
+section:not(#hero, #about-us) {
+	@apply px-5;
 }

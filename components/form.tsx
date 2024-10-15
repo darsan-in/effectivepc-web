@@ -1,3 +1,4 @@
+"use client";
 import postman from "@/scripts/postman";
 import { email, phone } from "./reusable/contact-info";
 
@@ -48,7 +49,7 @@ export default function Form() {
 			<div className="max-w-screen-xl mx-auto px-4 md:px-8">
 				<div className="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
 					<div className="max-w-lg space-y-3">
-						<h3 className="font-semibold text-primary">Contact</h3>
+						<h3 className="font-semibold text-accent">Contact</h3>
 						<p className="text-3xl font-semibold sm:text-4xl">
 							Let us know how we can help
 						</p>
@@ -63,7 +64,7 @@ export default function Form() {
 									<li
 										key={idx}
 										className="flex items-center gap-x-3">
-										<div className="flex-none text-primary">
+										<div className="flex-none text-accent">
 											{item.icon}
 										</div>
 										<p className="text-[2ch]">{item.contact}</p>
@@ -150,7 +151,7 @@ export default function Form() {
 									name="message"
 									className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border border-black focus:border-indigo-600 shadow-sm rounded-lg"></textarea>
 							</div>
-							<button className="w-full px-4 py-2 text-white font-medium bg-primary hover:bg-red-700 active:bg-indigo-600 rounded-lg duration-150">
+							<button className="w-full px-4 py-2 text-white font-medium bg-accent hover:bg-blue-500 active:bg-indigo-600 rounded-lg duration-150">
 								Submit
 							</button>
 						</form>

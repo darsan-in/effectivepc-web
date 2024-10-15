@@ -88,7 +88,7 @@ export default function About() {
 		<section
 			className="relative z-[20] pt-[8%] bg-[#121521]"
 			id="about-us">
-			<div className="flex flex-col lg:flex-row mx-auto px-4 md:px-[5%] border-b border-tw/[10%]">
+			<div className="flex flex-col lg:flex-row mx-auto md:px-[7%] border-b border-tw/[10%] max-w-screen-xl px-9">
 				<div className="lg:w-[60%] order-2 lg:order-1">
 					<div className="flex-col space-y-[5%]">
 						<h3
@@ -112,9 +112,9 @@ export default function About() {
 						</div>
 					</div>
 					<a
-						className="group px-4 mt-[4%] text-indigo-600 font-medium bg-indigo-50 rounded-full inline-flex items-center rgb-btn"
+						className="group px-4 mt-[6%] text-indigo-600 font-medium bg-indigo-50 rounded-full inline-flex items-center rgb-btn mb-[20%]"
 						href="#form">
-						Let&apos;s Get Start Building
+						Let&apos;s Start Building
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							className="h-6 w-6 ml-1 duration-150 group-hover:translate-x-1"

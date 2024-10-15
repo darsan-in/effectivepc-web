@@ -1,4 +1,3 @@
-"use client";
 import About from "@/components/about";
 import Banner from "@/components/banner";
 import FAQ from "@/components/faq";

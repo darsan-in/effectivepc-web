@@ -19,17 +19,17 @@ export default function Hero() {
 	];
 
 	const Brand = () => (
-		<div className="flex items-center justify-between py-5 lg:hidden">
-			<Logo classNames="text-white w-[150px] block lg:hidden" />
+		<div className="flex lg:hidden w-[90vw] justify-between items-center">
+			<Logo classNames={`text-accent w-[15em] block lg:hidden`} />
 
-			<div className="lg:hidden">
+			<div className="lg:hidden flex">
 				<button
-					className="menu-btn text-gray-400 hover:text-gray-300"
+					className="menu-btn text-gray-400 hover:text-gray-300 z-[10] relative"
 					onClick={() => setState(!state)}>
 					{state ? (
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							className="h-6 w-6"
+							className="h-7 w-7 relative -left-3"
 							viewBox="0 0 20 20"
 							fill="currentColor">
 							<path
@@ -45,7 +45,7 @@ export default function Hero() {
 							viewBox="0 0 24 24"
 							strokeWidth={1.5}
 							stroke="currentColor"
-							className="w-6 h-6">
+							className="w-9 h-9">
 							<path
 								strokeLinecap="round"
 								strokeLinejoin="round"
@@ -93,7 +93,7 @@ export default function Hero() {
 					<div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 lg:flex lg:px-8">
 						<Brand />
 						<div
-							className={`flex-1 items-center mt-8 lg:mt-0 lg:flex ${
+							className={`flex-1 items-center mt-8 lg:mt-0 lg:flex mb-[8%] lg:mb-0 ${
 								state ? "block" : "hidden"
 							} `}>
 							<ul className="flex-1 justify-end items-center space-y-6 lg:flex lg:space-x-6 lg:space-y-0">
@@ -144,7 +144,7 @@ export default function Hero() {
 					<div></div>
 				</div>
 			</div>
-			<div className="heroSubP">
+			<div className="heroSubP text-center">
 				<p>Tailored for Gamers. Optimized for Businesses.</p>
 			</div>
 			<div className="hero hidden lg:block">
@@ -153,17 +153,15 @@ export default function Hero() {
 				</div>
 			</div>
 
-			<div
-				className="relative flex-col justify-center items-center"
-				style={{ top: "12.6em" }}>
-				<p className="heroP">
+			<div className="relative flex-col justify-center items-center top-[14em] lg:top-[12.6em]">
+				<p className="heroP max-w-[95vw]">
 					Get the best value with custom-built PCs
 					<br /> designed to meet your needs and budget.
 				</p>
 				<a
 					href="#form"
-					className="rgb-btn z-[200] mx-auto mt-9 w-[190px] h-[40px] flex items-center justify-center">
-					Build Yours Today
+					className="rgb-btn z-[200] mx-auto mt-[1.7em] lg:mt-9 w-[190px] h-[40px] flex items-center justify-center">
+					Build Today
 				</a>
 			</div>
 

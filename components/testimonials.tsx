@@ -1,12 +1,28 @@
 export default function Testimonials() {
 	const testimonials = [
 		{
+			avatar: "/src/dummy.png",
+			name: "Velu Prabakaran",
+			title: "ND",
+			quote:
+				"They built an advanced computer that perfectly matched my job requirements. The individual who assembled my PC is exceptionally knowledgeable and truly understood my needs. The build was completed in a surprisingly short time, and their skills are outstanding. I admire the computer builder for taking the time to fully grasp my basic requirements before customizing the PC to meet my specific needs. This machine has significantly improved my work efficiency and productivity. If you're considering getting a specialized computer, I highly recommend them. A special thanks to Mr. Darsan for creating such a powerful machine.",
+		},
+		{
 			avatar: "/src/ramkumar.jpg",
 			name: "Ramkumar",
 			title: "Software Engineer @Payrup",
 			quote:
 				"They are not just experts in software and hardware but true tech generalists. They deeply understand your requirements and deliver 100% satisfaction by leveraging cutting-edge technology and the latest trends. Their knowledge of the tech market allows them to build highly effective PCs, even within a tight budget. Performance is their top priority, ensuring you get the most powerful and efficient PC possible for your investment.",
 		},
+
+		{
+			avatar: "/src/dummy.png",
+			name: "Siva Shankar",
+			title: "ND",
+			quote:
+				"I recently ordered a gaming PC from Effective PC and I’m beyond impressed. The entire process, from selecting components to tracking the build, was smooth and hassle-free. The PC arrived promptly, expertly assembled, and performs brilliantly—handling all my games at high settings without any issues. Customer support was responsive and helpful throughout. Highly recommend!",
+		},
+
 		{
 			avatar: "/src/nigilan.jpg",
 			name: "Nigilan",
@@ -15,11 +31,18 @@ export default function Testimonials() {
 				"Effective PC understands the specific needs and builds PC exactly for that purpose.",
 		},
 		{
+			avatar: "/src/ashok.png",
+			name: "Ashok",
+			title: "ND",
+			quote:
+				"Effective PC understood my needs and delivered a system that perfectly met my requirements. After comparing it to higher-end brands, I found that the performance was just as good, but at a much better value. I'm completely satisfied with my investment, and this has been my personal experience with Effective PC.",
+		},
+		/* {
 			avatar: "https://randomuser.me/api/portraits/men/86.jpg",
 			name: "Balaji",
 			title: "",
 			quote: "In Progress",
-		},
+		}, */
 	];
 
 	return (
@@ -85,7 +108,7 @@ export default function Testimonials() {
 					</ul>
 				</div>
 			</div>
-			<div className="absolute top-0 w-full h-[38%] bg-tw"></div>
+			<div className="absolute top-0 left-0 w-full h-[38%] bg-tw"></div>
 		</section>
 	);
 }

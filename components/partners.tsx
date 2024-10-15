@@ -1,6 +1,6 @@
 export default function Partners() {
 	return (
-		<div
+		<section
 			className="py-[8%] bg-gray-50"
 			id="partners">
 			<div className="max-w-screen-xl mx-auto px-4 md:px-8">
@@ -96,6 +96,6 @@ export default function Partners() {
 					</ul>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

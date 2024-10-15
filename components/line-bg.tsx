@@ -1,3 +1,4 @@
+"use client";
 import RGBLine from "@/scripts/circuit-line-bg";
 import { useEffect } from "react";
 

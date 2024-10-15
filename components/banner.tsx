@@ -55,7 +55,7 @@ export default function Banner() {
 							);
 						}}
 					/>
-					<p className="pb-[4%] mt-5 text-start text-[17px]">
+					<p className="pb-[4%] mt-7 text-start text-sm">
 						As part of our commitment to helping you get the best PC for
 						your needs, we&apos;re offering free consultation and expert
 						guidance at no additional cost. Whether you&apos;re a gamer or
@@ -65,11 +65,11 @@ export default function Banner() {
 						continue to grow and serve our early clients.
 					</p>
 					<div className="bg-gray-800 p-5 rounded-xl">
-						<p className="text-[17px]">
+						<p className="text-sm">
 							<span className="font-bold">Contact: </span>
 							{phone}
 						</p>
-						<p className="text-[17px]">
+						<p className="text-sm">
 							<span className="font-bold">Email: </span>
 							{supportMail}
 						</p>
@@ -78,7 +78,7 @@ export default function Banner() {
 			),
 			contentWidth: "auto",
 			contentContainerClassNames:
-				"flex-col bg-black/[90%] text-tw text-[1ch] leading-loose font-light text-center p-[5%] relative",
+				"flex-col bg-black/[90%] text-tw leading-loose font-light text-center p-[5%] relative w-[18.5em] lg:w-[25em]",
 		});
 
 	return (
@@ -87,7 +87,7 @@ export default function Banner() {
 			id="banner">
 			<div className="max-w-screen-xl mx-auto px-4 flex items-start justify-between text-black sm:items-center md:px-8 py-[0.3%]">
 				<div className="flex-1 justify-center flex items-start gap-x-4 sm:items-center lg:flex-row flex-col">
-					<div className="flex-none p-1 px-3 rounded-full bg-[#05060f] flex items-center justify-center font-medium text-sm text-tw">
+					<div className="flex-none p-1 px-3 rounded-full bg-[#05060f] flex items-center justify-center font-medium text-sm text-tw mt-2 lg:mt-0 hidden lg:block">
 						Entry Offer
 					</div>
 					<p className="font-medium p-2 text-sm">
