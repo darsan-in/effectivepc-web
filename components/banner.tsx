@@ -1,3 +1,4 @@
+"use client";
 import { phone, supportMail } from "./reusable/contact-info";
 import PopOverTrigger from "./reusable/popover-trigger";
 
