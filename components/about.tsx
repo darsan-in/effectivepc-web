@@ -1,15 +1,12 @@
 import "@/styles/about-card.scss";
 import CubeSlide from "./cube-slide";
-import LineBG from "./line-bg";
 
 const FeatureCard = () => (
-	<div className="relative h-auto mx-auto px-4 md:px-8 z-[2] pt-[7%] bg-[#000]">
-		<LineBG classNames="w-[100vw] h-[100%] left-0 top-0 z-[-2]" />
-		<div className="absolute h-[100%] w-[100%] top-0 left-0 bg-[rgba(0,0,0,0.015)]"></div>
+	<div className="relative h-auto mx-auto px-4 md:px-8 z-[2] bg-black">
 		<div
-			className="w-full flex flex-col lg:flex-row justify-center pb-[10%] gap-y-5"
+			className="max-w-screen-2xl w-full flex flex-col lg:flex-row pb-[10%] gap-y-5 mx-auto"
 			id="gamer">
-			<div className="comp ml-[4%]">
+			<div className="comp">
 				<img
 					style={{ objectFit: "cover" }}
 					src="/src/gamer.jpg"
@@ -21,58 +18,84 @@ const FeatureCard = () => (
 				<h2>For Gamers</h2>
 				<ul>
 					<li>
-						<strong>Custom-Built for Maximum Performance:</strong> Get the
-						ultimate gaming experience with PCs tailored for speed,
-						graphics, and efficiency.
+						<span>🎮</span>
+						<strong>Custom-Built for Maximum Performance:</strong>
+						<span>
+							Get the ultimate gaming experience with PCs tailored for
+							speed, graphics, and efficiency.
+						</span>
 					</li>
 					<li>
-						<strong>Top-Tier Gaming Specs:</strong> We build systems
-						designed to handle the most demanding games with ease.
+						<span>⚙️</span>
+						<strong>Top-Tier Gaming Specs:</strong>
+						<span>
+							We build systems designed to handle the most demanding games
+							with ease.
+						</span>
 					</li>
 					<li>
-						<strong>Future-Proofing:</strong> Stay ahead of the curve with
-						PCs that are built to last, ready for future upgrades and new
-						technologies.
+						<span>🔧</span>
+						<strong>Future-Proofing:</strong>
+						<span>
+							Stay ahead of the curve with PCs that are built to last,
+							ready for future upgrades and new technologies.
+						</span>
 					</li>
 					<li>
-						<strong>Tailored to Your Playstyle:</strong> Whether you need
-						fast frame rates or immersive visuals, we build to match your
-						specific gaming preferences.
+						<span>🎯</span>
+						<strong>Tailored to Your Playstyle:</strong>
+						<span>
+							Whether you need fast frame rates or immersive visuals, we
+							build to match your specific gaming preferences.
+						</span>
 					</li>
 				</ul>
 			</div>
 		</div>
 
 		<div
-			className="w-full flex justify-around pb-[7.5%] flex flex-col lg:flex-row gap-y-5"
+			className="max-w-screen-2xl mx-auto w-full flex pb-[7.5%] lg:pb-0 flex-col lg:flex-row gap-y-5"
 			id="pro">
-			<div className="card">
+			<div className="card order-2 lg:order-1">
 				<h2>For Businesses</h2>
 				<ul>
 					<li>
-						<strong>Save Investment Capital:</strong> Get custom PCs built
-						to your exact needs, ensuring your capital is used wisely,
-						leaving more for other critical business areas.
+						<span>💼</span>
+						<strong>Save Investment Capital:</strong>
+						<span>
+							Get custom PCs built to your exact needs, ensuring your
+							capital is used wisely, leaving more for other critical
+							business areas.
+						</span>
 					</li>
 					<li>
-						<strong>Tailored to Business Requirements:</strong> We design
-						systems specifically for your operational needs, enhancing
-						efficiency and scalability.
+						<span>⚙️</span>
+						<strong>Tailored to Business Requirements:</strong>
+						<span>
+							We design systems specifically for your operational needs,
+							enhancing efficiency and scalability.
+						</span>
 					</li>
 					<li>
-						<strong>Cost-Efficient Solutions:</strong> No unnecessary
-						add-ons—just what your business needs for optimal performance
-						and budget control.
+						<span>💰</span>
+						<strong>Cost-Efficient Solutions:</strong>
+						<span>
+							No unnecessary add-ons—just what your business needs for
+							optimal performance and budget control.
+						</span>
 					</li>
 					<li>
-						<strong>Boost Productivity:</strong> Our PCs are built for
-						speed and reliability, helping your business stay productive
-						and focus on growth.
+						<span>🚀</span>
+						<strong>Boost Productivity:</strong>
+						<span>
+							Our PCs are built for speed and reliability, helping your
+							business stay productive and focus on growth.
+						</span>
 					</li>
 				</ul>
 			</div>
 
-			<div className="comp">
+			<div className="comp order-1 lg:order-2">
 				<img
 					style={{ objectFit: "cover" }}
 					src="/src/pro.jpg"
@@ -86,11 +109,11 @@ const FeatureCard = () => (
 export default function About() {
 	return (
 		<section
-			className="relative z-[20] pt-[8%] bg-[#121521]"
+			className="relative z-[20] pt-[8%] bg-[#080a0d]"
 			id="about-us">
-			<div className="flex flex-col lg:flex-row mx-auto md:px-[7%] border-b border-tw/[10%] max-w-screen-xl px-9">
+			<div className="flex flex-col lg:flex-row mx-auto md:px-[7%] border-b border-tw/[10%] max-w-screen-2xl px-9 w-full">
 				<div className="lg:w-[60%] order-2 lg:order-1">
-					<div className="flex-col space-y-[5%]">
+					<div className="flex-col space-y-[5%] w-full">
 						<h3
 							className="text-3xl neon turquoise font-semibold md:text-5xl"
 							style={{
@@ -99,7 +122,7 @@ export default function About() {
 							Building Effective PCs <br />
 							<span className="neon pink">for Gamers and Businesses</span>
 						</h3>
-						<div className="leading-loose text-tw/[90%] font-light text-[1.3ch]">
+						<div className="leading-loose text-tw/[90%] font-light text-[1.3ch] w-full">
 							<p>
 								At{" "}
 								<strong className="font-bold">Effective PC ( EPC )</strong>

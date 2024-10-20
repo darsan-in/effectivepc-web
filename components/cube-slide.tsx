@@ -4,7 +4,7 @@ export default function CubeSlide() {
 	return (
 		<div
 			id="cube-slide"
-			className="order-1 lg:order-2">
+			className="order-1 lg:order-2 lg:w-[40%]">
 			<div
 				className="swiper"
 				dir="rtl">

@@ -74,7 +74,7 @@ export default function Hero() {
 	return (
 		<section
 			id="hero"
-			className="w-[100%] h-[40em] lg:h-[110vh] relative">
+			className="w-[100%] h-[40em] relative">
 			<canvas id="particleCanvas"></canvas>
 
 			<header>

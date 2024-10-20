@@ -3,20 +3,18 @@
 	initial-value: 132deg;
 	inherits: false;
 }
+
 .card:nth-child(1) {
 	@apply text-purple-200;
 }
+
 .card {
-	background: #191c29;
-	position: relative;
-	border-radius: 6px;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	display: flex;
-	color: rgb(88 199 250 / 100%);
 	transition: color 1s;
-	@apply w-[85%] lg:w-[50%] flex-col leading-loose px-[6%] py-[4%] rounded-br-[20%] rounded-tl-[20%] mx-auto;
+	@apply w-[90%] lg:w-[37em] xl:w-[50%] flex-col leading-loose px-[6%] py-[4%] mx-auto lg:bg-black/[80%] relative lg:absolute xl:max-w-[800px];
 }
 
 .card::before {
@@ -34,21 +32,6 @@
 .card > h2 {
 	animation: spin 5s ease infinite;
 }
-/* .card::after {
-	position: absolute;
-	content: "";
-	top: calc(var(--card-height) / 6);
-	left: 0;
-	right: 0;
-	z-index: -1;
-	height: 100%;
-	width: 100%;
-	margin: 0 auto;
-	transform: scale(0.1);
-	filter: blur(calc(var(--card-height) / 6));
-	opacity: 1;
-	transition: opacity 0.5s;
-} */
 
 @keyframes spin {
 	0% {
@@ -58,24 +41,14 @@
 		--rotate: 360deg;
 	}
 }
+
 .card > h2 {
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	@apply text-3xl font-bold tracking-widest mb-[2%];
-}
-.card > ul {
-	@apply font-light;
-	list-style: disc;
-	text-align: start;
+	@apply text-4xl xl:text-3xl font-bold tracking-widest mb-[2%];
 }
 
-.card > ul strong {
-	@apply font-medium;
-}
-
-#gamer > .card::before,
-#gamer > .card::after,
 #gamer > .card > h2 {
 	background-image: linear-gradient(
 		var(--rotate),
@@ -87,21 +60,62 @@
 		var(--pink),
 		var(--red)
 	);
-
-	border-bottom-right-radius: 20%;
 }
 
-#pro > .card::before,
-#pro > .card::after,
 #pro > .card > h2 {
 	background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
-	border-top-left-radius: 20%;
 }
 
-.card:hover {
-	color: white !important;
+.card > ul {
+	@apply font-light text-xl lg:list-disc lg:text-start;
+	color: rgb(88 199 250 / 100%);
+}
+
+.card > ul strong {
+	@apply font-semibold;
+}
+.card > ul > li {
+	@apply my-5;
+}
+
+@media (max-width: 768px) {
+	.card > ul > li {
+		@apply flex-col justify-center text-center;
+	}
+	.card > ul > li > span {
+		@apply block;
+	}
+}
+
+@media (min-width: 1024px) {
+	.card:hover {
+		color: white !important;
+	}
 }
 
 .comp {
-	@apply w-[85%] lg:w-[40%] flex mx-auto;
+	@apply w-[100%] flex mx-auto relative lg:absolute z-[-10];
+}
+
+#gamer,
+#pro {
+	@apply relative lg:h-[47em] !important;
+}
+
+#gamer > :is(.card, .comp) {
+	@apply lg:left-0 !important;
+}
+
+#pro > :is(.card, .comp) {
+	@apply lg:right-0 !important;
+}
+
+.comp > img {
+	@apply w-full;
+}
+
+.comp > img,
+#gamer,
+#pro {
+	@apply lg:h-[40em] !important;
 }

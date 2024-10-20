@@ -2,19 +2,23 @@
 	display: grid;
 	grid-template-columns: 50% 45%;
 	place-items: center;
-	/* gap: 60px; */
-	gap: 0px;
-	@apply lg:min-h-[80vh] lg:-top-[5em] lg:left-[5em];
-	padding: 20px 60px;
+	@apply xl:min-h-[20em] xl:-top-[4.5em] xl:left-[5em];
+	padding: 1.5em 4.5em;
 	position: relative;
+}
+
+@media screen and (min-width: 420px) and (max-width: 600px) {
+	#cube-slide {
+		margin-bottom: 2em;
+	}
 }
 
 /* SLIDER */
 
 .swiper {
 	position: relative;
-	width: 265px;
-	height: 380px;
+	@apply w-[200%] lg:w-[300px];
+	aspect-ratio: 265 / 380;
 }
 
 .swiper-slide {

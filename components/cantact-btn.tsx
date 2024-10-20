@@ -13,7 +13,7 @@ export default function ContactBtn() {
 			<>
 				<a
 					className="block"
-					href="tel:+918825907253">
+					href={`tel:+91${phone}`}>
 					<span className="font-normal">Contact:</span> {phone}
 				</a>
 				<a
