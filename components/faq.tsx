@@ -134,7 +134,7 @@ export default function FAQ() {
 	return (
 		<section
 			id="faqs"
-			className="leading-relaxed mx-auto px-4 md:px-8 w-full py-[7%] bg-black text-white">
+			className="leading-relaxed mx-auto px-4 md:px-8 w-full py-[6em] bg-black text-white">
 			<div className="space-y-3 text-center">
 				<h1 className="text-4xl font-semibold text-accent">
 					Frequently Asked Questions

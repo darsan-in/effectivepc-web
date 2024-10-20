@@ -22,14 +22,6 @@ export default function Testimonials() {
 			quote:
 				"I recently ordered a gaming PC from Effective PC and I’m beyond impressed. The entire process, from selecting components to tracking the build, was smooth and hassle-free. The PC arrived promptly, expertly assembled, and performs brilliantly—handling all my games at high settings without any issues. Customer support was responsive and helpful throughout. Highly recommend!",
 		},
-
-		{
-			avatar: "/src/nigilan.jpg",
-			name: "Nigilan",
-			title: "Marine Engineer",
-			quote:
-				"Effective PC understands the specific needs and builds PC exactly for that purpose.",
-		},
 		{
 			avatar: "/src/ashok.png",
 			name: "Ashok",
@@ -37,6 +29,14 @@ export default function Testimonials() {
 			quote:
 				"Effective PC understood my needs and delivered a system that perfectly met my requirements. After comparing it to higher-end brands, I found that the performance was just as good, but at a much better value. I'm completely satisfied with my investment, and this has been my personal experience with Effective PC.",
 		},
+		{
+			avatar: "/src/nigilan.jpg",
+			name: "Nigilan",
+			title: "Marine Engineer",
+			quote:
+				"Effective PC understands the specific needs and builds PC exactly for that purpose.",
+		},
+
 		/* {
 			avatar: "https://randomuser.me/api/portraits/men/86.jpg",
 			name: "Balaji",
@@ -46,7 +46,7 @@ export default function Testimonials() {
 	];
 
 	return (
-		<section className="relative py-[7%] text-gray-50 bg-white leading-loose tracking-wide">
+		<section className="relative py-[5.5em] text-gray-50 bg-white leading-loose tracking-wide">
 			<div className="relative z-10 max-w-screen-xl mx-auto px-4 md:px-8">
 				<div className="max-w-xl sm:text-center md:mx-auto">
 					<h3 className="text-3xl font-semibold sm:text-4xl text-black">
@@ -63,7 +63,7 @@ export default function Testimonials() {
 						perfect PC.
 					</p>
 				</div>
-				<div className="mt-12 pt-[7%]">
+				<div className="mt-12 pt-[3em]">
 					<ul className="grid items-center gap-6 sm:grid-cols-2 lg:grid-cols-3">
 						{testimonials.map((item, idx) => (
 							<li

@@ -111,7 +111,7 @@ export default function Features() {
 	];
 
 	return (
-		<section className="py-[8%] text-white bg-black">
+		<section className="pt-[8%] pb-[7em] text-white bg-black">
 			<div className="max-w-screen-xl mx-auto px-4 md:px-8">
 				<div className="max-w-2xl space-y-3">
 					<h3
