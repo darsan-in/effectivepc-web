@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://www.example.com/terms-conditions</loc>
+<lastmod>2024-10-22T20:47:40.721+05:30</lastmod>
+</url>
+<url>
+<loc>https://www.example.com/shop</loc>
+<lastmod>2024-10-22T20:47:41.029+05:30</lastmod>
+</url>
+<url>
+<loc>https://www.example.com/privacy-policy</loc>
+<lastmod>2024-10-22T20:47:41.053+05:30</lastmod>
+</url>
+<url>
+<loc>https://www.example.com/</loc>
+<lastmod>2024-10-22T20:47:40.783+05:30</lastmod>
+</url>
+<url>
+<loc>https://www.example.com/disclaimers</loc>
+<lastmod>2024-10-22T20:47:41.040+05:30</lastmod>
+</url>
+<url>
+<loc>https://www.example.com/blogs</loc>
+<lastmod>2024-10-22T20:47:41.015+05:30</lastmod>
+</url>
+<url>
+<loc>https://www.example.com/404</loc>
+<lastmod>2024-10-22T20:47:46.295+05:30</lastmod>
+</url>
+</urlset>

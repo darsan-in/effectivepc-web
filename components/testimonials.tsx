@@ -1,14 +1,14 @@
 export default function Testimonials() {
 	const testimonials = [
 		{
-			avatar: "/src/dummy.png",
+			avatar: "/src/testimonial-users/velu.webp",
 			name: "Velu Prabakaran",
 			title: "ND",
 			quote:
 				"They built an advanced computer that perfectly matched my job requirements. The individual who assembled my PC is exceptionally knowledgeable and truly understood my needs. The build was completed in a surprisingly short time, and their skills are outstanding. I admire the computer builder for taking the time to fully grasp my basic requirements before customizing the PC to meet my specific needs. This machine has significantly improved my work efficiency and productivity. If you're considering getting a specialized computer, I highly recommend them. A special thanks to Mr. Darsan for creating such a powerful machine.",
 		},
 		{
-			avatar: "/src/ramkumar.jpg",
+			avatar: "/src/testimonial-users/ramkumar.webp",
 			name: "Ramkumar",
 			title: "Software Engineer @Payrup",
 			quote:
@@ -16,21 +16,21 @@ export default function Testimonials() {
 		},
 
 		{
-			avatar: "/src/dummy.png",
+			avatar: "/src/testimonial-users/dummy.webp",
 			name: "Siva Shankar",
 			title: "ND",
 			quote:
 				"I recently ordered a gaming PC from Effective PC and I’m beyond impressed. The entire process, from selecting components to tracking the build, was smooth and hassle-free. The PC arrived promptly, expertly assembled, and performs brilliantly—handling all my games at high settings without any issues. Customer support was responsive and helpful throughout. Highly recommend!",
 		},
 		{
-			avatar: "/src/ashok.png",
+			avatar: "/src/testimonial-users/ashok.webp",
 			name: "Ashok",
 			title: "ND",
 			quote:
 				"Effective PC understood my needs and delivered a system that perfectly met my requirements. After comparing it to higher-end brands, I found that the performance was just as good, but at a much better value. I'm completely satisfied with my investment, and this has been my personal experience with Effective PC.",
 		},
 		{
-			avatar: "/src/nigilan.jpg",
+			avatar: "/src/testimonial-users/nigilan.webp",
 			name: "Nigilan",
 			title: "Marine Engineer",
 			quote:
@@ -38,7 +38,7 @@ export default function Testimonials() {
 		},
 
 		/* {
-			avatar: "https://randomuser.me/api/portraits/men/86.jpg",
+			avatar: "https://randomuser.me/api/portraits/men/86.webp",
 			name: "Balaji",
 			title: "",
 			quote: "In Progress",
@@ -47,7 +47,10 @@ export default function Testimonials() {
 
 	return (
 		<section className="relative py-[5.5em] text-gray-50 bg-white leading-loose tracking-wide">
-			<div className="relative z-10 max-w-screen-xl mx-auto px-4 md:px-8">
+			<div
+				className="relative z-10 max-w-screen-xl mx-auto px-4 md:px-8"
+				data-aos="fade-up"
+				data-aos-delay="350">
 				<div className="max-w-xl sm:text-center md:mx-auto">
 					<h3 className="text-3xl font-semibold sm:text-4xl text-black">
 						People&apos;s Experiences With Us
@@ -68,7 +71,9 @@ export default function Testimonials() {
 						{testimonials.map((item, idx) => (
 							<li
 								key={idx}
-								className="bg-white rounded-xl border shadow-md">
+								className="bg-white rounded-xl border shadow-md"
+								data-aos="fade-up"
+								data-aos-delay={(idx + 1) * 250}>
 								<div className="p-4">
 									<svg
 										className="w-9 h-9 text-gray-300"
@@ -91,7 +96,7 @@ export default function Testimonials() {
 										<img
 											src={item.avatar}
 											className="w-16 h-16 rounded-full border-2 border-accent"
-											alt=""
+											alt={`Testimonial/Review for Effective PC (effectivepc.in) by ${item.name} `}
 										/>
 										<div>
 											<span className="block text-gray-800 font-semibold">

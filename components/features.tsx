@@ -111,7 +111,10 @@ export default function Features() {
 	];
 
 	return (
-		<section className="pt-[8%] pb-[7em] text-white bg-black">
+		<section
+			className="pt-[8%] pb-[7em] text-white bg-black"
+			data-aos="fade-right"
+			data-aos-delay="250">
 			<div className="max-w-screen-xl mx-auto px-4 md:px-8">
 				<div className="max-w-2xl space-y-3">
 					<h3
@@ -131,7 +134,9 @@ export default function Features() {
 						{features.map((item, idx) => (
 							<li
 								key={idx}
-								className="flex gap-x-4 text-[1.5ch]">
+								className="flex gap-x-4 text-[1.5ch]"
+								data-aos="zoom-in"
+								data-aos-delay={(idx + 1) * 250}>
 								<div className="flex-none w-12 h-12 bg-accent text-black rounded-lg flex items-center justify-center">
 									{item.icon}
 								</div>

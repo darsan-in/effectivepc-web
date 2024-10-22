@@ -96,6 +96,7 @@ export default function Footer() {
 						href="https://cresteem.com/"
 						target="_blank"
 						about="blank"
+						aria-label="This website is built by cresteem.com"
 						style={{ zIndex: 200 }}
 						className="flex justify-center items-center gap-x-2 relative order-4">
 						{" "}

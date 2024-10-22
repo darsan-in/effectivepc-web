@@ -1,4 +1,9 @@
 import "@/styles/policy.scss";
+export const metadata = {
+	title: "Disclaimer | Effective PC",
+	description:
+		"Read the disclaimer for Effective PC. Understand the limitations of our liability, terms regarding third-party links, and accuracy of information. Stay informed about the scope of our services.",
+};
 
 export default function Disclaimer() {
 	return (

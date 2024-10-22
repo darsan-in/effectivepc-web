@@ -8,18 +8,21 @@ class Compress {
 		);
 	}
 
-	svg() {
+	otherImages() {
 		// compress all svg
-		compressImages("public/**/*svg", "svg", "compressed").catch(
-			console.error,
-		);
+		compressImages(
+			"public/src/*jpg",
+			"webp",
+			"compressed",
+			"public/src/testimonial-users",
+		).catch(console.error);
 	}
 
 	serviceImages() {
 		// compress service visuals
 		compressImages(
-			"public/services-visuals/**/*{jpg,webp}",
-			"avif",
+			"public/src/testimonial-users/*{jpg,png}",
+			"webp",
 			"compressed",
 		).catch(console.error);
 	}
@@ -34,4 +37,4 @@ class Compress {
 	}
 }
 
-new Compress().favicons();
+new Compress().otherImages();

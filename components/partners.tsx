@@ -5,7 +5,10 @@ export default function Partners() {
 		<section
 			className="py-[5em] bg-gray-50"
 			id="partners">
-			<div className="max-w-screen-xl mx-auto px-4 md:px-8">
+			<div
+				className="max-w-screen-xl mx-auto px-4 md:px-8"
+				data-aos="fade-left"
+				data-aos-delay="500">
 				<div className="max-w-xl mx-auto text-center">
 					<h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
 						Partners
@@ -19,22 +22,30 @@ export default function Partners() {
 				<div className="mt-12 flex justify-center">
 					<ul className="inline-grid grid-cols-2 gap-x-10 gap-y-6 md:gap-x-16 md:grid-cols-3 lg:grid-cols-4">
 						{/* LOGO 1 */}
-						<li>
+						<li
+							data-aos="zoom-in"
+							data-aos-delay="350">
 							<Logo classNames="w-28 my-auto" />
 						</li>
 
 						{/* LOGO 2 */}
-						<li>
+						<li
+							data-aos="zoom-in"
+							data-aos-delay="550">
 							<Logo classNames="w-28 my-auto" />
 						</li>
 
 						{/* LOGO 3 */}
-						<li>
+						<li
+							data-aos="zoom-in"
+							data-aos-delay="750">
 							<Logo classNames="w-28 my-auto" />
 						</li>
 
 						{/* LOGO 4 */}
-						<li>
+						<li
+							data-aos="zoom-in"
+							data-aos-delay="950">
 							<Logo classNames="w-28 my-auto" />
 						</li>
 					</ul>

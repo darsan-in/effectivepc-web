@@ -1,3 +1,10 @@
+export const metadata = {
+	title:
+		"Shop Custom-Built PCs | Gaming Rigs & Business Workstations | Effective PC",
+	description:
+		"Shop high-performance custom-built PCs tailored for gamers and businesses. Explore gaming rigs, business workstations, and affordable PC solutions designed for maximum efficiency and value. Build your ideal computer with Effective PC.",
+};
+
 export default function Shop() {
 	return (
 		<main>

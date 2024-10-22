@@ -1,4 +1,9 @@
 import "@/styles/policy.scss";
+export const metadata = {
+	title: "Privacy Policy | Effective PC",
+	description:
+		"Learn about how Effective PC handles your data. Our privacy policy outlines the collection, use, and protection of personal information to ensure transparency and data security.",
+};
 
 export default function PrivacyPolicy() {
 	return (

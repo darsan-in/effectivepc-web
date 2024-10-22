@@ -1,6 +1,8 @@
 export const metadata = {
-	title: "",
-	description: "",
+	title:
+		"Effective PC Blog | Custom PC Builds, Gaming Rigs, and Business Solutions",
+	description:
+		"Explore the latest trends, tips, and insights on custom-built PCs, gaming setups, high-performance workstations, and cost-effective solutions for businesses. Stay informed with Effective PC's expert advice on maximizing PC performance and productivity.",
 };
 
 export default function Blogs() {

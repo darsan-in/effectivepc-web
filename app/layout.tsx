@@ -1,6 +1,5 @@
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
-import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "../styles/globals.scss";
 
@@ -12,12 +11,6 @@ const Font = Nunito({
 	display: "swap",
 	subsets: ["latin"],
 });
-
-export const metadata: Metadata = {
-	title: "Custom-Built PCs for Gamers & Businesses | Effective PC",
-	description:
-		"Discover custom-built PCs tailored for gamers and startups at Effective PC. We deliver high-performance, budget-friendly systems that maximize efficiency and power up your gaming or business operations. Get your custom PC today at effectivepc.in.",
-};
 
 export default function RootLayout({
 	children,

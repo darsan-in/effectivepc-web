@@ -5,16 +5,20 @@ const FeatureCard = () => (
 	<div className="relative h-auto mx-auto px-4 md:px-8 z-[2] bg-black">
 		<div
 			className="max-w-screen-2xl w-full flex flex-col lg:flex-row pb-[10%] gap-y-5 mx-auto"
-			id="gamer">
+			id="gamer"
+			data-aos="fade-right">
 			<div className="comp">
 				<img
 					style={{ objectFit: "cover" }}
-					src="/src/gamer.jpg"
+					src="/src/gamer.webp"
 					alt="gamer playing in custom built PC by effectivepc.in, without limit"
 				/>
 			</div>
 
-			<div className="card">
+			<div
+				className="card"
+				data-aos="fade-right"
+				data-aos-delay="400">
 				<h2>For Gamers</h2>
 				<ul>
 					<li>
@@ -55,8 +59,12 @@ const FeatureCard = () => (
 
 		<div
 			className="max-w-screen-2xl mx-auto w-full flex pb-[7.5%] lg:pb-0 flex-col lg:flex-row gap-y-5"
-			id="pro">
-			<div className="card order-2 lg:order-1">
+			id="pro"
+			data-aos="fade-left">
+			<div
+				className="card order-2 lg:order-1"
+				data-aos="fade-left"
+				data-aos-delay="400">
 				<h2>For Businesses</h2>
 				<ul>
 					<li>
@@ -98,7 +106,7 @@ const FeatureCard = () => (
 			<div className="comp order-1 lg:order-2">
 				<img
 					style={{ objectFit: "cover" }}
-					src="/src/pro.jpg"
+					src="/src/pro.webp"
 					alt="pro working in custom built PC by effectivepc.in, with peace and ease"
 				/>
 			</div>
@@ -109,6 +117,7 @@ const FeatureCard = () => (
 export default function About() {
 	return (
 		<section
+			data-aos="fade-left"
 			className="relative z-[20] pt-[8%] bg-[#080a0d]"
 			id="about-us">
 			<div className="flex flex-col lg:flex-row mx-auto md:px-[7%] border-b border-tw/[10%] max-w-screen-2xl px-9 w-full">

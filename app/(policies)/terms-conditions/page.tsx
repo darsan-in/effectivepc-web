@@ -1,4 +1,9 @@
 import "@/styles/policy.scss";
+export const metadata = {
+	title: "Terms of Service | Effective PC",
+	description:
+		"Review the terms of service for Effective PC. Understand the guidelines, rights, and responsibilities related to using our website and services for custom-built PCs and business solutions.",
+};
 
 export default function TermsConditions() {
 	return (
