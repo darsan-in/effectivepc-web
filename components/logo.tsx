@@ -1,6 +1,8 @@
 export default function Logo({ classNames }: { classNames?: string }) {
 	return (
-		<a href="/">
+		<a
+			href="/"
+			aria-label="Effective PC - Home page">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 2000 767.57"

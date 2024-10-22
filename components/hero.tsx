@@ -25,7 +25,8 @@ export default function Hero() {
 			<div className="lg:hidden flex">
 				<button
 					className="menu-btn text-gray-400 hover:text-gray-300 z-[10] relative"
-					onClick={() => setState(!state)}>
+					onClick={() => setState(!state)}
+					aria-label="Menu toggle">
 					{state ? (
 						<svg
 							xmlns="http://www.w3.org/2000/svg"

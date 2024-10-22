@@ -6,12 +6,14 @@ import Keywords from "./keywords";
 import Logo from "./logo";
 
 export default function Footer() {
-	const socialLinks: { href: string; Icon: IconType }[] = [
+	const socialLinks: { name: string; href: string; Icon: IconType }[] = [
 		{
+			name: "Instagram",
 			href: "https://www.instagram.com/effectivepc.in/",
 			Icon: FaInstagram,
 		},
 		{
+			name: "Linkedin",
 			href: "https://www.linkedin.com/company/effectivepc",
 			Icon: FaLinkedinIn,
 		},
@@ -84,7 +86,7 @@ export default function Footer() {
 					<nav className="flex flex-col xl:flex-row gap-x-5 mx-10 text-center order-3">
 						{policiesNavs.map((nav, idx) => (
 							<a
-								className="hover:underline"
+								className="hover:underline p-2"
 								key={idx}
 								href={nav.href}>
 								{nav.name}
@@ -111,7 +113,8 @@ export default function Footer() {
 									className="border rounded-full flex items-center justify-center sm-btn flex justify-center items-center"
 									key={idx}
 									href={link.href}
-									target="_blank">
+									target="_blank"
+									aria-label={`Visit ${link.name} page of Effective PC`}>
 									<link.Icon className="text-tw svg-icon w-[70%] h-[70%] m-auto" />
 								</a>
 							))}

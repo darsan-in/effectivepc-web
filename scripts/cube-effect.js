@@ -3,7 +3,7 @@ export default function CubeEffect() {
 		effect: "cube",
 		grabCursor: true,
 		loop: true,
-		speed: 10000,
+		speed: 5000,
 		cubeEffect: {
 			shadow: true,
 			slideShadows: true,
