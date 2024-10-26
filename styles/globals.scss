@@ -26,6 +26,9 @@ main,
 body {
 	overflow-x: hidden !important;
 }
+section {
+	overflow: hidden !important;
+}
 
 @property --p {
 	syntax: "<percentage>";
@@ -159,4 +162,8 @@ a,
 span,
 strong {
 	@apply tracking-wide leading-relaxed;
+}
+
+em {
+	@apply font-bold;
 }

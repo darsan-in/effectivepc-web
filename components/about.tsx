@@ -23,7 +23,7 @@ const FeatureCard = () => (
 				<ul>
 					<li>
 						<span>🎮</span>
-						<strong>Custom-Built for Maximum Performance:</strong>
+						<strong>Custom-Built for Maximum Performance: </strong>
 						<span>
 							Get the ultimate gaming experience with PCs tailored for
 							speed, graphics, and efficiency.
@@ -31,7 +31,7 @@ const FeatureCard = () => (
 					</li>
 					<li>
 						<span>⚙️</span>
-						<strong>Top-Tier Gaming Specs:</strong>
+						<strong>Top-Tier Gaming Specs: </strong>
 						<span>
 							We build systems designed to handle the most demanding games
 							with ease.
@@ -39,7 +39,7 @@ const FeatureCard = () => (
 					</li>
 					<li>
 						<span>🔧</span>
-						<strong>Future-Proofing:</strong>
+						<strong>Future-Proofing: </strong>
 						<span>
 							Stay ahead of the curve with PCs that are built to last,
 							ready for future upgrades and new technologies.
@@ -47,7 +47,7 @@ const FeatureCard = () => (
 					</li>
 					<li>
 						<span>🎯</span>
-						<strong>Tailored to Your Playstyle:</strong>
+						<strong>Tailored to Your Playstyle: </strong>
 						<span>
 							Whether you need fast frame rates or immersive visuals, we
 							build to match your specific gaming preferences.
@@ -69,7 +69,7 @@ const FeatureCard = () => (
 				<ul>
 					<li>
 						<span>💼</span>
-						<strong>Save Investment Capital:</strong>
+						<strong>Save Investment Capital: </strong>
 						<span>
 							Get custom PCs built to your exact needs, ensuring your
 							capital is used wisely, leaving more for other critical
@@ -78,7 +78,7 @@ const FeatureCard = () => (
 					</li>
 					<li>
 						<span>⚙️</span>
-						<strong>Tailored to Business Requirements:</strong>
+						<strong>Tailored to Business Requirements: </strong>
 						<span>
 							We design systems specifically for your operational needs,
 							enhancing efficiency and scalability.
@@ -86,7 +86,7 @@ const FeatureCard = () => (
 					</li>
 					<li>
 						<span>💰</span>
-						<strong>Cost-Efficient Solutions:</strong>
+						<strong>Cost-Efficient Solutions: </strong>
 						<span>
 							No unnecessary add-ons—just what your business needs for
 							optimal performance and budget control.
@@ -94,7 +94,7 @@ const FeatureCard = () => (
 					</li>
 					<li>
 						<span>🚀</span>
-						<strong>Boost Productivity:</strong>
+						<strong>Boost Productivity: </strong>
 						<span>
 							Our PCs are built for speed and reliability, helping your
 							business stay productive and focus on growth.
